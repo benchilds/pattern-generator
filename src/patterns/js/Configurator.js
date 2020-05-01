@@ -10,3 +10,8 @@ export function Configurator() {
     "Configurator"
   );
 }
+
+// ReactDOM.render(
+//   <Configurator/>,
+//   document.getElementById('conf')
+// )
