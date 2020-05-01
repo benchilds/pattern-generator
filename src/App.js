@@ -1,6 +1,6 @@
 import React from 'react';
-import { Configurator } from './Configurator';
-import { Pattern } from './Pattern';
+import { Configurator } from './patterns/js/Configurator';
+import { Pattern } from './patterns/js/Pattern';
 
 // import logo from './logo.svg';
 import './App.css';
