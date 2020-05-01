@@ -4,9 +4,10 @@ export function Pattern() {
 
   console.log(`Pattern`);
 
-  return React.createElement(
-    "div",
-    null,
-    "Pattern"
+  return (
+    <div>
+      Pattern
+    </div>
   );
+
 }

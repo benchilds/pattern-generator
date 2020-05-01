@@ -4,10 +4,9 @@ export function Configurator() {
 
   console.log(`Configurator`);
 
-  return (
-    <div>
-      Configurator
-    </div>
+  return React.createElement(
+    "div",
+    null,
+    "Configurator"
   );
-
 }
