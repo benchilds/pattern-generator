@@ -8,6 +8,7 @@ import './App.css';
 function App() {
   return (
     <div>
+      <div id="conf"></div>
       <div className="config">
         <Configurator />
       </div>

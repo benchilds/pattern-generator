@@ -11,3 +11,8 @@ export function Configurator() {
   );
 
 }
+
+// ReactDOM.render(
+//   <Configurator/>,
+//   document.getElementById('conf')
+// )
