@@ -4,8 +4,8 @@ export function Pattern() {
 
   console.log(`Pattern`);
 
-  const colNum = 10;
-  const rowNum = 5;
+  const colNum = 20;
+  const rowNum = 8;
   const items = []
   let x = 0;
   
@@ -14,13 +14,16 @@ export function Pattern() {
     x = (i - 1) % colNum === 0 ? x + 1 : x;
     let y = i % colNum === 0 ? colNum : i % colNum;
 
-    items.push(<div key={i}>{i + ' x-' + x + ' y-' + y}</div>)
+    let item = <div key={i} className={'cell ' + i + ' x-' + x + ' y-' + y}>
+      X
+    </div>;
+
+    items.push(item);
   
   }
 
   return (
-    <div>
-      Pattern<br/>
+    <div className={'grid cols-' + colNum + ' rows-' + rowNum}>
       {items}
     </div>
   );
