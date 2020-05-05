@@ -15,6 +15,15 @@ $grid-width: 960px;
       padding: 0.5rem;
       background-color: #ececec;
       text-align: center;
+
+      &.selected {
+        background-color: #333333;
+        color: #fafafa;
+      }
+
+      &.sel-1 { background-color: #666666; }
+      &.sel-2 { background-color: #999999; }
+      &.sel-3 { background-color: #cccccc; }
     }
 
     &.cols-20 { .cell { flex-basis: calc(#{$grid-width}/20); } }

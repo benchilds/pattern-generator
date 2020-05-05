@@ -6,7 +6,8 @@ export function Pattern() {
 
   const colNum = 20;
   const rowNum = 8;
-  const selected = 37; // Probably change to x/y target
+  const selectedX = 2; // row
+  const selectedY = 9; // col
   
   const items = []
   let x = 0;
@@ -17,7 +18,12 @@ export function Pattern() {
     let y = i % colNum === 0 ? colNum : i % colNum;
 
     let cellClass = 'cell ' + i + ' x-' + x + ' y-' + y;
-    cellClass += i === selected ? ' selected' : '';
+    cellClass += x === selectedX && y === selectedY ? ' selected' : ''; // selected
+    
+    cellClass += ((x === selectedX - 1 || x === selectedX + 1) && y === selectedY) || ((y === selectedY - 1 || y === selectedY + 1) && x === selectedX) ? ' sel-1' : '';
+    cellClass += (x === selectedX && (y === selectedY - 2 || y === selectedY + 2)) ? ' sel-2' : '';
+    cellClass += (y === selectedY && (x === selectedX - 2 || x === selectedX + 2)) ? ' sel-2' : '';
+    cellClass += (x === selectedX - 1 && y === selectedY - 1 || x === selectedX - 1 && y === selectedY + 1 || x === selectedX + 1 && y === selectedY - 1 || x === selectedX + 1 && y === selectedY + 1) ? ' sel-2' : '';
 
     let item = <div key={i} className={cellClass}>
       {i}
