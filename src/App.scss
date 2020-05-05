@@ -24,6 +24,13 @@ $grid-width: 960px;
       &.sel-1 { background-color: #666666; }
       &.sel-2 { background-color: #999999; }
       &.sel-3 { background-color: #cccccc; }
+
+      &:hover {
+        background-color: orange;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 300ms linear;
+      }
     }
 
     &.cols-20 { .cell { flex-basis: calc(#{$grid-width}/20); } }
