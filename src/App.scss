@@ -1,54 +1,97 @@
-/* Variables */
-$grid-width: 960px;
+/* VARIABLES -----------------------------------------------------------------*/
+/* Probably move to _variables.scss in future */
 
+// Dimensions
+$grid-width: 1024px;
+
+// Colours
+$black: #222222;
+$grey1: #747474;
+$grey2: #d4d4d4;
+$white: #ffffff;
+$orange: #ff6100;
+
+/* MIXINS --------------------------------------------------------------------*/
+/* Probably move to _mixins.scss in future */
+
+// Lighten a color
+// @param {Color} $color - color to tint
+// @param {Color} $amount - amount to tint as %age
+// @return {Color}
+@function tint($color, $amount) {
+  @return mix($white, $color, $amount);
+}
+
+// Darken a color
+// @param {Color} $color - color to shade
+// @param {Color} $amount - amount to shade as %age
+// @return {Color}
+@function shade($color) {
+  @return mix($black, $color, $amount);
+}
+
+/* HTML & GENERAL STYLES -----------------------------------------------------*/
+
+body { background-color: $black; }
+
+/* COMPONENTS ----------------------------------------------------------------*/
+
+// <Pattern/>
 .pattern {
   max-width: $grid-width;
   margin: 1rem auto;
+  background-color: transparent;
 
   .grid {
     display: flex;
     flex-wrap: wrap;
 
     .cell {
-      // flex-basis: 10%;
-      // flex-basis: 10%;
-      padding: 0.5rem;
-      background-color: #ececec;
+      border: 1px solid $black;
+      padding: 0 0.5rem;
+      background-color: tint($black, 40%);
       text-align: center;
 
-      &.selected {
-        background-color: #333333;
-        color: #fafafa;
+      p {
+        margin: 0;
+        padding: 0;
+        line-height: 100%;
       }
 
-      &.sel-1 { background-color: #666666; }
-      &.sel-2 { background-color: #999999; }
-      &.sel-3 { background-color: #cccccc; }
+      &.selected {
+        background-color: $black;
+        color: $white;
+      }
+
+      &.sel-1 { background-color: tint($black, 10%); }
+      &.sel-2 { background-color: tint($black, 20%); }
+      &.sel-3 { background-color: tint($black, 30%); }
 
       &:hover {
-        background-color: orange;
+        background-color: $orange;
+        color: $white;
         font-weight: bold;
         cursor: pointer;
         transition: background-color 300ms linear;
       }
     }
 
-    &.cols-20 { .cell { flex-basis: calc(#{$grid-width}/20); } }
-    &.cols-19 { .cell { flex-basis: calc(#{$grid-width}/19); } }
-    &.cols-18 { .cell { flex-basis: calc(#{$grid-width}/18); } }
-    &.cols-17 { .cell { flex-basis: calc(#{$grid-width}/17); } }
-    &.cols-16 { .cell { flex-basis: calc(#{$grid-width}/16); } }
-    &.cols-15 { .cell { flex-basis: calc(#{$grid-width}/15); } }
-    &.cols-14 { .cell { flex-basis: calc(#{$grid-width}/14); } }
-    &.cols-13 { .cell { flex-basis: calc(#{$grid-width}/13); } }
-    &.cols-12 { .cell { flex-basis: calc(#{$grid-width}/12); } }
-    &.cols-11 { .cell { flex-basis: calc(#{$grid-width}/11); } }
-    &.cols-10 { .cell { flex-basis: calc(#{$grid-width}/10); } }
-    &.cols-9 { .cell { flex-basis: calc(#{$grid-width}/9); } }
-    &.cols-8 { .cell { flex-basis: calc(#{$grid-width}/8); } }
-    &.cols-7 { .cell { flex-basis: calc(#{$grid-width}/7); } }
-    &.cols-6 { .cell { flex-basis: calc(#{$grid-width}/6); } }
-    &.cols-5 { .cell { flex-basis: calc(#{$grid-width}/5); } }
+    &.cols-20 { .cell { flex-basis: calc(#{$grid-width}/20); min-height: calc(#{$grid-width}/20); p {line-height: calc(#{$grid-width}/20);} } }
+    &.cols-19 { .cell { flex-basis: calc(#{$grid-width}/19); min-height: calc(#{$grid-width}/19); p {line-height: calc(#{$grid-width}/19);} } }
+    &.cols-18 { .cell { flex-basis: calc(#{$grid-width}/18); min-height: calc(#{$grid-width}/18); p {line-height: calc(#{$grid-width}/18);} } }
+    &.cols-17 { .cell { flex-basis: calc(#{$grid-width}/17); min-height: calc(#{$grid-width}/17); p {line-height: calc(#{$grid-width}/17);} } }
+    &.cols-16 { .cell { flex-basis: calc(#{$grid-width}/16); min-height: calc(#{$grid-width}/16); p {line-height: calc(#{$grid-width}/16);} } }
+    &.cols-15 { .cell { flex-basis: calc(#{$grid-width}/15); min-height: calc(#{$grid-width}/15); p {line-height: calc(#{$grid-width}/15);} } }
+    &.cols-14 { .cell { flex-basis: calc(#{$grid-width}/14); min-height: calc(#{$grid-width}/14); p {line-height: calc(#{$grid-width}/14);} } }
+    &.cols-13 { .cell { flex-basis: calc(#{$grid-width}/13); min-height: calc(#{$grid-width}/13); p {line-height: calc(#{$grid-width}/13);} } }
+    &.cols-12 { .cell { flex-basis: calc(#{$grid-width}/12); min-height: calc(#{$grid-width}/12); p {line-height: calc(#{$grid-width}/12);} } }
+    &.cols-11 { .cell { flex-basis: calc(#{$grid-width}/11); min-height: calc(#{$grid-width}/11); p {line-height: calc(#{$grid-width}/11);} } }
+    &.cols-10 { .cell { flex-basis: calc(#{$grid-width}/10); min-height: calc(#{$grid-width}/10); p {line-height: calc(#{$grid-width}/10);} } }
+    &.cols-9 { .cell { flex-basis: calc(#{$grid-width}/9); min-height: calc(#{$grid-width}/9); p {line-height: calc(#{$grid-width}/9);} } }
+    &.cols-8 { .cell { flex-basis: calc(#{$grid-width}/8); min-height: calc(#{$grid-width}/8); p {line-height: calc(#{$grid-width}/8);} } }
+    &.cols-7 { .cell { flex-basis: calc(#{$grid-width}/7); min-height: calc(#{$grid-width}/7); p {line-height: calc(#{$grid-width}/7);} } }
+    &.cols-6 { .cell { flex-basis: calc(#{$grid-width}/6); min-height: calc(#{$grid-width}/6); p {line-height: calc(#{$grid-width}/6);} } }
+    &.cols-5 { .cell { flex-basis: calc(#{$grid-width}/5); min-height: calc(#{$grid-width}/5); p {line-height: calc(#{$grid-width}/5);} } }
   }
 
   &.pattern-specific-stuff {

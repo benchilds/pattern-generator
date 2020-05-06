@@ -26,7 +26,7 @@ export function Pattern() {
     cellClass += (x === selectedX - 1 && y === selectedY - 1 || x === selectedX - 1 && y === selectedY + 1 || x === selectedX + 1 && y === selectedY - 1 || x === selectedX + 1 && y === selectedY + 1) ? ' sel-2' : '';
 
     let item = <div key={i} className={cellClass}>
-      {i}
+      <p>{i}</p>
     </div>;
 
     items.push(item);

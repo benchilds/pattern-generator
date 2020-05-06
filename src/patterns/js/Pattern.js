@@ -28,7 +28,11 @@ export function Pattern() {
     let item = React.createElement(
       'div',
       { key: i, className: cellClass },
-      i
+      React.createElement(
+        'p',
+        null,
+        i
+      )
     );
 
     items.push(item);
