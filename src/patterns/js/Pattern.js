@@ -37,16 +37,16 @@ export function Pattern() {
 
   const colNum = 20;
   const rowNum = 8;
-  const selectedX = 2; // row
-  const selectedY = 9; // col
+  const selectedX = 9; // col
+  const selectedY = 3; // row
 
   const items = [];
-  let x = 0;
+  let y = 0;
 
   for (let i = 1; i <= colNum * rowNum; i++) {
 
-    x = (i - 1) % colNum === 0 ? x + 1 : x;
-    let y = i % colNum === 0 ? colNum : i % colNum;
+    let x = i % colNum === 0 ? colNum : i % colNum;
+    y = (i - 1) % colNum === 0 ? y + 1 : y;
 
     items.push(React.createElement(Cell, { key: 'c-' + i, i: i, x: x, y: y, selectedX: selectedX, selectedY: selectedY }));
   }
