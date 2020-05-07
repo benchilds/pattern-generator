@@ -1,12 +1,9 @@
 import React from "react";
 
-// function handleCellClick(i, x, y) {
-//   // this.setState(state => ({
-//   //   isToggleOn: !state.isToggleOn
-//   // }));
-//   console.log(i, x, y);
-// }
-
+function handleCellClick(i, x, y, e) {
+  e.preventDefault();
+  console.log(`Clicked! i:${i} x:${x} y:${y}`);
+}
 
 function Cell(props) {
 
@@ -25,7 +22,7 @@ function Cell(props) {
   // let item = <div onClick={this.handleCellClick.bind(i, x, y)} key={i} className={cellClass}>
   return React.createElement(
     'div',
-    { key: 'c-' + props.i, className: cellClass },
+    { className: cellClass, onClick: e => handleCellClick(props.i, props.x, props.y, e) },
     React.createElement(
       'p',
       null,
@@ -51,7 +48,7 @@ export function Pattern() {
     x = (i - 1) % colNum === 0 ? x + 1 : x;
     let y = i % colNum === 0 ? colNum : i % colNum;
 
-    items.push(React.createElement(Cell, { i: i, x: x, y: y, selectedX: selectedX, selectedY: selectedY }));
+    items.push(React.createElement(Cell, { key: 'c-' + i, i: i, x: x, y: y, selectedX: selectedX, selectedY: selectedY }));
   }
 
   return React.createElement(
