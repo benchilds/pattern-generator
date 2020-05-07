@@ -1,5 +1,36 @@
 import React from "react";
 
+// function handleCellClick(i, x, y) {
+//   // this.setState(state => ({
+//   //   isToggleOn: !state.isToggleOn
+//   // }));
+//   console.log(i, x, y);
+// }
+
+
+function Cell(props) {
+  
+  let cellClass = 'cell ' + props.i + ' x-' + props.x + ' y-' + props.y;
+  cellClass += props.x === props.selectedX && props.y === props.selectedY ? ' selected' : ''; // selected
+  
+  cellClass += (props.y === props.selectedY && (props.x === props.selectedX - 1 || props.x === props.selectedX + 1)) ? ' sel-1' : '';
+  cellClass += (props.x === props.selectedX && (props.y === props.selectedY - 1 || props.y === props.selectedY + 1)) ? ' sel-1' : '';
+  cellClass += (props.x === props.selectedX && (props.y === props.selectedY - 2 || props.y === props.selectedY + 2)) ? ' sel-2' : '';
+  cellClass += (props.y === props.selectedY && (props.x === props.selectedX - 2 || props.x === props.selectedX + 2)) ? ' sel-2' : '';
+  cellClass += (props.x === props.selectedX - 1 && props.y === props.selectedY - 1) ? ' sel-2' : '';
+  cellClass += (props.x === props.selectedX - 1 && props.y === props.selectedY + 1) ? ' sel-2' : '';
+  cellClass += (props.x === props.selectedX + 1 && props.y === props.selectedY - 1) ? ' sel-2' : '';
+  cellClass += (props.x === props.selectedX + 1 && props.y === props.selectedY + 1) ? ' sel-2' : '';
+  
+  // let item = <div onClick={this.handleCellClick.bind(i, x, y)} key={i} className={cellClass}>
+  return (
+    <div key={'c-'+props.i} className={cellClass}>
+      <p>{props.i}</p>
+    </div>
+  );
+
+}
+
 export function Pattern() {
 
   console.log(`Pattern`);
@@ -17,19 +48,7 @@ export function Pattern() {
     x = (i - 1) % colNum === 0 ? x + 1 : x;
     let y = i % colNum === 0 ? colNum : i % colNum;
 
-    let cellClass = 'cell ' + i + ' x-' + x + ' y-' + y;
-    cellClass += x === selectedX && y === selectedY ? ' selected' : ''; // selected
-    
-    cellClass += ((x === selectedX - 1 || x === selectedX + 1) && y === selectedY) || ((y === selectedY - 1 || y === selectedY + 1) && x === selectedX) ? ' sel-1' : '';
-    cellClass += (x === selectedX && (y === selectedY - 2 || y === selectedY + 2)) ? ' sel-2' : '';
-    cellClass += (y === selectedY && (x === selectedX - 2 || x === selectedX + 2)) ? ' sel-2' : '';
-    cellClass += (x === selectedX - 1 && y === selectedY - 1 || x === selectedX - 1 && y === selectedY + 1 || x === selectedX + 1 && y === selectedY - 1 || x === selectedX + 1 && y === selectedY + 1) ? ' sel-2' : '';
-
-    let item = <div key={i} className={cellClass}>
-      <p>{i}</p>
-    </div>;
-
-    items.push(item);
+    items.push(<Cell i={i} x={x} y={y} selectedX={selectedX} selectedY={selectedY} />);
   
   }
 
