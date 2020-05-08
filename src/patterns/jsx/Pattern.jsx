@@ -9,8 +9,11 @@ function Cell(props) {
   }
   
   let cellClass = 'cell ' + props.i + ' x-' + props.x + ' y-' + props.y;
-  cellClass += props.x === props.selectedX && props.y === props.selectedY ? ' selected' : ''; // selected
   
+  // Selected cell
+  cellClass += props.x === props.selectedX && props.y === props.selectedY ? ' sel' : '';
+  
+  // Surrounding cells
   cellClass += (props.y === props.selectedY && (props.x === props.selectedX - 1 || props.x === props.selectedX + 1)) ? ' sel-1' : '';
   cellClass += (props.x === props.selectedX && (props.y === props.selectedY - 1 || props.y === props.selectedY + 1)) ? ' sel-1' : '';
   cellClass += (props.x === props.selectedX && (props.y === props.selectedY - 2 || props.y === props.selectedY + 2)) ? ' sel-2' : '';
@@ -54,8 +57,12 @@ export function Pattern() {
   }
 
   return (
-    <div className={'grid cols-' + colNum + ' rows-' + rowNum}>
-      {items}
+    <div className="row no-gutters">
+      <div className="col">
+        <div className={'grid cols-' + colNum + ' rows-' + rowNum}>
+          {items}
+        </div>
+      </div>
     </div>
   );
 

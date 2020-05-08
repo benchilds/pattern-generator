@@ -8,11 +8,10 @@ import './App.scss';
 function App() {
   return (
     <div>
-      <div id="conf"></div>
-      <div className="config">
+      <div className="config container">
         <Configurator />
       </div>
-      <div className="pattern">
+      <div className="pattern container-fluid p-0">
         <Pattern />
       </div>
     </div>
