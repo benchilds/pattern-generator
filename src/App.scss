@@ -30,9 +30,19 @@ $orange: #ff6100;
   @return mix($black, $color, $amount);
 }
 
+/* FONTS ---------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
 /* HTML & GENERAL STYLES -----------------------------------------------------*/
 
-body { background-color: $black; }
+body {
+  background-color: $black;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 { font-weight: 500; }
 
 /* COMPONENTS ----------------------------------------------------------------*/
 

@@ -7,7 +7,12 @@ export function Configurator() {
   return React.createElement(
     "div",
     null,
-    "Configurator"
+    "Configurator",
+    React.createElement(
+      "div",
+      { "class": "alert alert-primary", role: "alert" },
+      "A simple primary alert\u2014check it out!"
+    )
   );
 }
 
