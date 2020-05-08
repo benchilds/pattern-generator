@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Configurator() {
+export function Selector() {
 
   console.log(`Configurator`);
 

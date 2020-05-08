@@ -57,7 +57,7 @@ export function Pattern() {
   }
 
   return (
-    <div className="row no-gutters">
+    <div className="row">
       <div className="col">
         <div className={'grid cols-' + colNum + ' rows-' + rowNum}>
           {items}

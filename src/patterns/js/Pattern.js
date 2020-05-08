@@ -60,7 +60,7 @@ export function Pattern() {
 
   return React.createElement(
     'div',
-    { className: 'row no-gutters' },
+    { className: 'row' },
     React.createElement(
       'div',
       { className: 'col' },

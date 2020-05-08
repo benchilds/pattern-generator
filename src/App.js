@@ -1,5 +1,5 @@
 import React from 'react';
-import { Configurator } from './patterns/js/Configurator';
+import { Selector } from './patterns/js/Selector';
 import { Pattern } from './patterns/js/Pattern';
 
 // import logo from './logo.svg';
@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <div className="config container">
-        <Configurator />
+        <Selector />
       </div>
       <div className="pattern container-fluid p-0">
         <Pattern />
