@@ -82,10 +82,10 @@ function Configurator(props) {
 
   return React.createElement(
     "div",
-    { className: "row mb-5" },
+    { className: "row justify-content-center mb-5" },
     React.createElement(
       "div",
-      { className: "col" },
+      { className: "col col-2" },
       React.createElement(
         "div",
         { className: "form-group" },
@@ -110,7 +110,7 @@ function Configurator(props) {
     ),
     React.createElement(
       "div",
-      { className: "col" },
+      { className: "col col-2" },
       React.createElement(
         "div",
         { className: "form-group" },
@@ -135,7 +135,7 @@ function Configurator(props) {
     ),
     React.createElement(
       "div",
-      { className: "col" },
+      { className: "col col-2" },
       React.createElement(
         "div",
         { className: "form-group" },
@@ -144,7 +144,7 @@ function Configurator(props) {
           { htmlFor: "selectedX" },
           "Selected X"
         ),
-        React.createElement("input", { type: "number", className: "form-control", id: "selectedX", "aria-describedby": "selectedXNote", placeholder: "5-20", min: "5", max: "20", value: props.selX }),
+        React.createElement("input", { type: "number", className: "form-control", id: "selectedX", "aria-describedby": "selectedXNote", placeholder: "5-20", min: "5", max: "20", value: props.selX, readonly: true }),
         React.createElement(
           "small",
           { id: "selectedXNote", className: "form-text text-muted" },
@@ -159,7 +159,7 @@ function Configurator(props) {
     ),
     React.createElement(
       "div",
-      { className: "col" },
+      { className: "col col-2" },
       React.createElement(
         "div",
         { className: "form-group" },
@@ -168,11 +168,11 @@ function Configurator(props) {
           { htmlFor: "selectedY" },
           "Selected Y"
         ),
-        React.createElement("input", { type: "number", className: "form-control", id: "selectedY", "aria-describedby": "selectedYNote", placeholder: "1-10", min: "1", max: "10", value: props.selY }),
+        React.createElement("input", { type: "number", className: "form-control", id: "selectedY", "aria-describedby": "selectedYNote", placeholder: "1-10", min: "1", max: "10", value: props.selY, readonly: true }),
         React.createElement(
           "small",
           { id: "selectedYNote", className: "form-text text-muted" },
-          "Initially ",
+          "Initial ",
           React.createElement(
             "strong",
             null,
