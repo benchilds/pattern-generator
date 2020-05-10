@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export function Pattern() {
+export function CSSGrid() {
 
   function handleSelectedChange(x, y) {
     setX(x);
