@@ -44,7 +44,7 @@ export function Selector() {
             ),
             React.createElement(
               "option",
-              { disabled: true },
+              null,
               "Columns pattern (CSS)"
             ),
             React.createElement(

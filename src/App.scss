@@ -46,8 +46,9 @@ h1, h2, h3, h4, h5 { font-weight: 500; }
 
 /* COMPONENTS ----------------------------------------------------------------*/
 
-// <Pattern/>
-.pattern {
+// <CSSGrid/>
+.css-grid,
+.css-columns {
   max-width: $grid-width;
   margin: 1rem auto;
   background-color: transparent;

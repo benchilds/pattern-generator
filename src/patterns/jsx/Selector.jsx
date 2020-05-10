@@ -17,7 +17,7 @@ export function Selector() {
             <label htmlFor="patternType">Pattern</label>
             <select class="form-control" id="patternType" aria-describedby="patternTypeNote">
               <option>Grid pattern (CSS)</option>
-              <option disabled>Columns pattern (CSS)</option>
+              <option>Columns pattern (CSS)</option>
               <option disabled>Rows pattern (CSS)</option>
               <option disabled>Lines (D3.js)</option>
             </select>
