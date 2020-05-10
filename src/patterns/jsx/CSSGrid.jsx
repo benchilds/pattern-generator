@@ -2,17 +2,14 @@ import React, { useState } from "react";
 
 export function CSSGrid() {
 
-  function handleSelectedChange(x, y) {
-    setX(x);
-    setY(y);
-  }
+  const handleColsChange = (numCols) => setNumCols(numCols);
+  const handleRowsChange = (numRows) => setNumRows(numRows);
+  const handleSelectedChange = (x, y) => {setX(x); setY(y); }
 
-  const numCols = 20;
-  const numRows = 10;
-
+  const [numCols, setNumCols] = useState(20);
+  const [numRows, setNumRows] = useState(10);
   const [selX, setX] = useState(2);
   const [selY, setY] = useState(3);
-  
   const items = []
   let y = 0;
   
@@ -27,7 +24,7 @@ export function CSSGrid() {
 
   return (
     <div>
-      <Configurator numCols={numCols} numRows={numRows} selX={selX} selY={selY}/>
+      <Configurator onColsChange={handleColsChange} onRowsChange={handleRowsChange} numCols={numCols} numRows={numRows} selX={selX} selY={selY}/>
       <div className="row">
         <div className="col">
           <div className={'grid cols-' + numCols + ' rows-' + numRows}>
@@ -73,34 +70,44 @@ function Cell(props) {
 
 function Configurator(props) {
 
+  function handleColsChange(e) {
+    // console.log(`Columns changed! patternCols:${e.target.value}`);
+    props.onColsChange(e.target.value);
+  }
+
+  function handleRowsChange(e) {
+    // console.log(`Rows changed! patternRows:${e.target.value}`);
+    props.onRowsChange(e.target.value);
+  }
+
   return (
     <div className="settings row justify-content-center mb-5">
       <div className="col col-2">
         <div className="form-group">
           <label htmlFor="patternCols">Columns</label>
-          <input type="number" className="form-control" id="patternCols" aria-describedby="patternColsNote" placeholder={props.numCols} min="5" max="20" />
-          <small id="patternColsNote" className="form-text text-muted">Number of <strong>x</strong> columns</small>
+          <input onChange={(e) => handleColsChange(e)} type="number" className="form-control" id="patternCols" aria-describedby="patternColsNote" placeholder="2-25" min="2" max="25" value={props.numCols} />
+          <small id="patternColsNote" className="form-text text-muted">Enter <strong>2-25</strong> columns</small>
         </div>
       </div>
       <div className="col col-2">
         <div className="form-group">
           <label htmlFor="patternRows">Rows</label>
-          <input type="number" className="form-control" id="patternRows" aria-describedby="patternRowsNote" placeholder={props.numRows} min="1" max="10" />
-          <small id="patternRowsNote" className="form-text text-muted">Number of <strong>y</strong> rows</small>
+          <input onChange={(e) => handleRowsChange(e)} type="number" className="form-control" id="patternRows" aria-describedby="patternRowsNote" placeholder="1-20" min="1" max="20" value={props.numRows} />
+          <small id="patternRowsNote" className="form-text text-muted">Enter <strong>1-20</strong> rows</small>
         </div>
       </div>
       <div className="col col-2">
         <div className="form-group">
           <label htmlFor="selectedX">Selected X</label>
           <input type="number" className="form-control" id="selectedX" aria-describedby="selectedXNote" placeholder="5-20" min="5" max="20" value={props.selX} readOnly/>
-          <small id="selectedXNote" className="form-text text-muted">Initial <strong>x</strong></small>
+          <small id="selectedXNote" className="form-text text-muted">Selected <strong>x</strong> column</small>
         </div>
       </div>
       <div className="col col-2">
         <div className="form-group">
           <label htmlFor="selectedY">Selected Y</label>
           <input type="number" className="form-control" id="selectedY" aria-describedby="selectedYNote" placeholder="1-10" min="1" max="10" value={props.selY} readOnly/>
-          <small id="selectedYNote" className="form-text text-muted">Initial <strong>y</strong></small>
+          <small id="selectedYNote" className="form-text text-muted">Select <strong>y</strong> row</small>
         </div>
       </div>
     </div>

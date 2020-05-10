@@ -2,14 +2,11 @@ import React, { useState } from "react";
 
 export function CSSColumns() {
 
-  function handleSelectedChange(x) {
-    setX(x);
-  }
+  const handleColsChange = (numCols) => setNumCols(numCols);
+  const handleSelectedChange = (x) => setX(x);
 
-  const numCols = 20;
-
+  const [numCols, setNumCols] = useState(20);
   const [selX, setX] = useState(12);
-  
   const items = []
   
   for (let i = 1; i <= numCols; i++) {
@@ -22,7 +19,7 @@ export function CSSColumns() {
 
   return (
     <div>
-      <Configurator numCols={numCols} selX={selX} />
+      <Configurator onColsChange={handleColsChange} numCols={numCols} selX={selX} />
       <div className="row">
         <div className="col">
           <div className={'grid cols-' + numCols}>
@@ -61,13 +58,18 @@ function Cell(props) {
 
 function Configurator(props) {
 
+  function handleColsChange(e) {
+    // console.log(`Columns changed! patternCols:${e.target.value}`);
+    props.onColsChange(e.target.value);
+  }
+
   return (
     <div className="settings row justify-content-center mb-5">
       <div className="col col-2">
         <div className="form-group">
           <label htmlFor="patternCols">Columns</label>
-          <input type="number" className="form-control" id="patternCols" aria-describedby="patternColsNote" placeholder={props.numCols} min="5" max="30" />
-          <small id="patternColsNote" className="form-text text-muted">Number of <strong>x</strong> columns</small>
+          <input onChange={(e) => handleColsChange(e)} type="number" className="form-control" id="patternCols" aria-describedby="patternColsNote" placeholder="2-30" min="2" max="30" value={props.numCols} />
+          <small id="patternColsNote" className="form-text text-muted">Enter <strong>2-30</strong> columns</small>
         </div>
       </div>
       <div className="col col-2">

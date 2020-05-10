@@ -2,14 +2,11 @@ import React, { useState } from "react";
 
 export function CSSColumns() {
 
-  function handleSelectedChange(x) {
-    setX(x);
-  }
+  const handleColsChange = numCols => setNumCols(numCols);
+  const handleSelectedChange = x => setX(x);
 
-  const numCols = 20;
-
+  const [numCols, setNumCols] = useState(20);
   const [selX, setX] = useState(12);
-
   const items = [];
 
   for (let i = 1; i <= numCols; i++) {
@@ -22,7 +19,7 @@ export function CSSColumns() {
   return React.createElement(
     "div",
     null,
-    React.createElement(Configurator, { numCols: numCols, selX: selX }),
+    React.createElement(Configurator, { onColsChange: handleColsChange, numCols: numCols, selX: selX }),
     React.createElement(
       "div",
       { className: "row" },
@@ -68,6 +65,11 @@ function Cell(props) {
 
 function Configurator(props) {
 
+  function handleColsChange(e) {
+    // console.log(`Columns changed! patternCols:${e.target.value}`);
+    props.onColsChange(e.target.value);
+  }
+
   return React.createElement(
     "div",
     { className: "settings row justify-content-center mb-5" },
@@ -82,15 +84,15 @@ function Configurator(props) {
           { htmlFor: "patternCols" },
           "Columns"
         ),
-        React.createElement("input", { type: "number", className: "form-control", id: "patternCols", "aria-describedby": "patternColsNote", placeholder: props.numCols, min: "5", max: "30" }),
+        React.createElement("input", { onChange: e => handleColsChange(e), type: "number", className: "form-control", id: "patternCols", "aria-describedby": "patternColsNote", placeholder: "2-30", min: "2", max: "30", value: props.numCols }),
         React.createElement(
           "small",
           { id: "patternColsNote", className: "form-text text-muted" },
-          "Number of ",
+          "Enter ",
           React.createElement(
             "strong",
             null,
-            "x"
+            "2-30"
           ),
           " columns"
         )

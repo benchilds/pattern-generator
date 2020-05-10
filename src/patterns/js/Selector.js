@@ -2,8 +2,6 @@ import React from "react";
 
 export function Selector(props) {
 
-  console.log(`Configurator`);
-
   function handleSelectedChange(e) {
     // console.log(`Pattern changed! pattern:${e.target.value}`);
     props.onSelectedChange(e.target.value);

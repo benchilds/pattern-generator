@@ -69,6 +69,7 @@ h1, h2, h3, h4, h5 { font-weight: 500; }
       border: 1px solid $black;
       padding: 0 0.5rem;
       background-color: tint($black, 40%);
+      font-size: 14px;
       text-align: center;
 
       p {
@@ -95,22 +96,31 @@ h1, h2, h3, h4, h5 { font-weight: 500; }
       }
     }
 
-    &.cols-20 { .cell { flex-basis: calc(#{$grid-width}/20); min-height: calc(#{$grid-width}/20); p {line-height: calc(#{$grid-width}/20);} } }
-    &.cols-19 { .cell { flex-basis: calc(#{$grid-width}/19); min-height: calc(#{$grid-width}/19); p {line-height: calc(#{$grid-width}/19);} } }
-    &.cols-18 { .cell { flex-basis: calc(#{$grid-width}/18); min-height: calc(#{$grid-width}/18); p {line-height: calc(#{$grid-width}/18);} } }
-    &.cols-17 { .cell { flex-basis: calc(#{$grid-width}/17); min-height: calc(#{$grid-width}/17); p {line-height: calc(#{$grid-width}/17);} } }
-    &.cols-16 { .cell { flex-basis: calc(#{$grid-width}/16); min-height: calc(#{$grid-width}/16); p {line-height: calc(#{$grid-width}/16);} } }
-    &.cols-15 { .cell { flex-basis: calc(#{$grid-width}/15); min-height: calc(#{$grid-width}/15); p {line-height: calc(#{$grid-width}/15);} } }
-    &.cols-14 { .cell { flex-basis: calc(#{$grid-width}/14); min-height: calc(#{$grid-width}/14); p {line-height: calc(#{$grid-width}/14);} } }
-    &.cols-13 { .cell { flex-basis: calc(#{$grid-width}/13); min-height: calc(#{$grid-width}/13); p {line-height: calc(#{$grid-width}/13);} } }
-    &.cols-12 { .cell { flex-basis: calc(#{$grid-width}/12); min-height: calc(#{$grid-width}/12); p {line-height: calc(#{$grid-width}/12);} } }
-    &.cols-11 { .cell { flex-basis: calc(#{$grid-width}/11); min-height: calc(#{$grid-width}/11); p {line-height: calc(#{$grid-width}/11);} } }
-    &.cols-10 { .cell { flex-basis: calc(#{$grid-width}/10); min-height: calc(#{$grid-width}/10); p {line-height: calc(#{$grid-width}/10);} } }
-    &.cols-9 { .cell { flex-basis: calc(#{$grid-width}/9); min-height: calc(#{$grid-width}/9); p {line-height: calc(#{$grid-width}/9);} } }
-    &.cols-8 { .cell { flex-basis: calc(#{$grid-width}/8); min-height: calc(#{$grid-width}/8); p {line-height: calc(#{$grid-width}/8);} } }
-    &.cols-7 { .cell { flex-basis: calc(#{$grid-width}/7); min-height: calc(#{$grid-width}/7); p {line-height: calc(#{$grid-width}/7);} } }
-    &.cols-6 { .cell { flex-basis: calc(#{$grid-width}/6); min-height: calc(#{$grid-width}/6); p {line-height: calc(#{$grid-width}/6);} } }
-    &.cols-5 { .cell { flex-basis: calc(#{$grid-width}/5); min-height: calc(#{$grid-width}/5); p {line-height: calc(#{$grid-width}/5);} } }
+    &.cols-25 { .cell { flex-basis: calc(#{$grid-width}/25); min-height: calc(#{$grid-width}/25); p { font-size: 12px; line-height: calc(#{$grid-width}/20); } } }
+    &.cols-24 { .cell { flex-basis: calc(#{$grid-width}/24); min-height: calc(#{$grid-width}/24); p { font-size: 12px; line-height: calc(#{$grid-width}/20); } } }
+    &.cols-23 { .cell { flex-basis: calc(#{$grid-width}/23); min-height: calc(#{$grid-width}/23); p { font-size: 12px; line-height: calc(#{$grid-width}/20); } } }
+    &.cols-22 { .cell { flex-basis: calc(#{$grid-width}/22); min-height: calc(#{$grid-width}/22); p { font-size: 12px; line-height: calc(#{$grid-width}/20); } } }
+    &.cols-21 { .cell { flex-basis: calc(#{$grid-width}/21); min-height: calc(#{$grid-width}/21); p { font-size: 12px; line-height: calc(#{$grid-width}/20); } } }
+    &.cols-20 { .cell { flex-basis: calc(#{$grid-width}/20); min-height: calc(#{$grid-width}/20); p { line-height: calc(#{$grid-width}/20); } } }
+    &.cols-19 { .cell { flex-basis: calc(#{$grid-width}/19); min-height: calc(#{$grid-width}/19); p { line-height: calc(#{$grid-width}/19); } } }
+    &.cols-18 { .cell { flex-basis: calc(#{$grid-width}/18); min-height: calc(#{$grid-width}/18); p { line-height: calc(#{$grid-width}/18); } } }
+    &.cols-17 { .cell { flex-basis: calc(#{$grid-width}/17); min-height: calc(#{$grid-width}/17); p { line-height: calc(#{$grid-width}/17); } } }
+    &.cols-16 { .cell { flex-basis: calc(#{$grid-width}/16); min-height: calc(#{$grid-width}/16); p { line-height: calc(#{$grid-width}/16); } } }
+    &.cols-15 { .cell { flex-basis: calc(#{$grid-width}/15); min-height: calc(#{$grid-width}/15); p { line-height: calc(#{$grid-width}/15); } } }
+    &.cols-14 { .cell { flex-basis: calc(#{$grid-width}/14); min-height: calc(#{$grid-width}/14); p { line-height: calc(#{$grid-width}/14); } } }
+    &.cols-13 { .cell { flex-basis: calc(#{$grid-width}/13); min-height: calc(#{$grid-width}/13); p { line-height: calc(#{$grid-width}/13); } } }
+    &.cols-12 { .cell { flex-basis: calc(#{$grid-width}/12); min-height: calc(#{$grid-width}/12); p { line-height: calc(#{$grid-width}/12); } } }
+    &.cols-11 { .cell { flex-basis: calc(#{$grid-width}/11); min-height: calc(#{$grid-width}/11); p { line-height: calc(#{$grid-width}/11); } } }
+    &.cols-10 { .cell { flex-basis: calc(#{$grid-width}/10); min-height: calc(#{$grid-width}/10); p { line-height: calc(#{$grid-width}/10); } } }
+    &.cols-9 { .cell { flex-basis: calc(#{$grid-width}/9); min-height: calc(#{$grid-width}/9); p { line-height: calc(#{$grid-width}/9); } } }
+    &.cols-8 { .cell { flex-basis: calc(#{$grid-width}/8); min-height: calc(#{$grid-width}/8); p { line-height: calc(#{$grid-width}/8); } } }
+    &.cols-7 { .cell { flex-basis: calc(#{$grid-width}/7); min-height: calc(#{$grid-width}/7); p { line-height: calc(#{$grid-width}/7); } } }
+    &.cols-6 { .cell { flex-basis: calc(#{$grid-width}/6); min-height: calc(#{$grid-width}/6); p { line-height: calc(#{$grid-width}/6); } } }
+    &.cols-5 { .cell { flex-basis: calc(#{$grid-width}/5); min-height: calc(#{$grid-width}/5); p { line-height: calc(#{$grid-width}/5); } } }
+    &.cols-4 { .cell { flex-basis: calc(#{$grid-width}/4); min-height: calc(#{$grid-width}/4); p { line-height: calc(#{$grid-width}/4); } } }
+    &.cols-3 { .cell { flex-basis: calc(#{$grid-width}/3); min-height: calc(#{$grid-width}/3); p { line-height: calc(#{$grid-width}/3); } } }
+    &.cols-2 { .cell { flex-basis: calc(#{$grid-width}/2); min-height: calc(#{$grid-width}/2); p { line-height: calc(#{$grid-width}/2); } } }
+    &.cols-1 { .cell { flex-basis: calc(#{$grid-width}/1); min-height: calc(#{$grid-width}/1); p { line-height: calc(#{$grid-width}/1); } } }
 
   }
   
@@ -120,21 +130,34 @@ h1, h2, h3, h4, h5 { font-weight: 500; }
 
 .css-columns {
   .grid {
-    &.cols-20 { .cell { flex-basis: calc(#{$grid-width}/20); min-height: 400px; p {line-height: 400px;} } }
-    &.cols-19 { .cell { flex-basis: calc(#{$grid-width}/19); min-height: 400px; p {line-height: 400px;} } }
-    &.cols-18 { .cell { flex-basis: calc(#{$grid-width}/18); min-height: 400px; p {line-height: 400px;} } }
-    &.cols-17 { .cell { flex-basis: calc(#{$grid-width}/17); min-height: 400px; p {line-height: 400px;} } }
-    &.cols-16 { .cell { flex-basis: calc(#{$grid-width}/16); min-height: 400px; p {line-height: 400px;} } }
-    &.cols-15 { .cell { flex-basis: calc(#{$grid-width}/15); min-height: 400px; p {line-height: 400px;} } }
-    &.cols-14 { .cell { flex-basis: calc(#{$grid-width}/14); min-height: 400px; p {line-height: 400px;} } }
-    &.cols-13 { .cell { flex-basis: calc(#{$grid-width}/13); min-height: 400px; p {line-height: 400px;} } }
-    &.cols-12 { .cell { flex-basis: calc(#{$grid-width}/12); min-height: 400px; p {line-height: 400px;} } }
-    &.cols-11 { .cell { flex-basis: calc(#{$grid-width}/11); min-height: 400px; p {line-height: 400px;} } }
-    &.cols-10 { .cell { flex-basis: calc(#{$grid-width}/10); min-height: 400px; p {line-height: 400px;} } }
-    &.cols-9 { .cell { flex-basis: calc(#{$grid-width}/9); min-height: 400px; p {line-height: 400px;} } }
-    &.cols-8 { .cell { flex-basis: calc(#{$grid-width}/8); min-height: 400px; p {line-height: 400px;} } }
-    &.cols-7 { .cell { flex-basis: calc(#{$grid-width}/7); min-height: 400px; p {line-height: 400px;} } }
-    &.cols-6 { .cell { flex-basis: calc(#{$grid-width}/6); min-height: 400px; p {line-height: 400px;} } }
-    &.cols-5 { .cell { flex-basis: calc(#{$grid-width}/5); min-height: 400px; p {line-height: 400px;} } }
+    &.cols-30 { .cell { flex-basis: calc(#{$grid-width}/30); min-height: 400px; p { font-size: 12px; line-height: 400px; } } }
+    &.cols-29 { .cell { flex-basis: calc(#{$grid-width}/29); min-height: 400px; p { font-size: 12px; line-height: 400px; } } }
+    &.cols-28 { .cell { flex-basis: calc(#{$grid-width}/28); min-height: 400px; p { font-size: 12px; line-height: 400px; } } }
+    &.cols-27 { .cell { flex-basis: calc(#{$grid-width}/27); min-height: 400px; p { font-size: 12px; line-height: 400px; } } }
+    &.cols-26 { .cell { flex-basis: calc(#{$grid-width}/26); min-height: 400px; p { font-size: 12px; line-height: 400px; } } }
+    &.cols-25 { .cell { flex-basis: calc(#{$grid-width}/25); min-height: 400px; p { font-size: 12px; line-height: 400px; } } }
+    &.cols-24 { .cell { flex-basis: calc(#{$grid-width}/24); min-height: 400px; p { font-size: 12px; line-height: 400px; } } }
+    &.cols-23 { .cell { flex-basis: calc(#{$grid-width}/23); min-height: 400px; p { font-size: 12px; line-height: 400px; } } }
+    &.cols-22 { .cell { flex-basis: calc(#{$grid-width}/22); min-height: 400px; p { font-size: 12px; line-height: 400px; } } }
+    &.cols-21 { .cell { flex-basis: calc(#{$grid-width}/21); min-height: 400px; p { font-size: 12px; line-height: 400px; } } }
+    &.cols-20 { .cell { flex-basis: calc(#{$grid-width}/20); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-19 { .cell { flex-basis: calc(#{$grid-width}/19); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-18 { .cell { flex-basis: calc(#{$grid-width}/18); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-17 { .cell { flex-basis: calc(#{$grid-width}/17); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-16 { .cell { flex-basis: calc(#{$grid-width}/16); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-15 { .cell { flex-basis: calc(#{$grid-width}/15); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-14 { .cell { flex-basis: calc(#{$grid-width}/14); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-13 { .cell { flex-basis: calc(#{$grid-width}/13); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-12 { .cell { flex-basis: calc(#{$grid-width}/12); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-11 { .cell { flex-basis: calc(#{$grid-width}/11); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-10 { .cell { flex-basis: calc(#{$grid-width}/10); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-9 { .cell { flex-basis: calc(#{$grid-width}/9); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-8 { .cell { flex-basis: calc(#{$grid-width}/8); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-7 { .cell { flex-basis: calc(#{$grid-width}/7); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-6 { .cell { flex-basis: calc(#{$grid-width}/6); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-5 { .cell { flex-basis: calc(#{$grid-width}/5); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-4 { .cell { flex-basis: calc(#{$grid-width}/4); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-3 { .cell { flex-basis: calc(#{$grid-width}/3); min-height: 400px; p { line-height: 400px; } } }
+    &.cols-2 { .cell { flex-basis: calc(#{$grid-width}/2); min-height: 400px; p { line-height: 400px; } } }
   }
 }
