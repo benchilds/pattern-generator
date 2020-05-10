@@ -2,32 +2,27 @@ import React, { useState } from "react";
 
 export function CSSColumns() {
 
-  function handleSelectedChange(x, y) {
+  function handleSelectedChange(x) {
     setX(x);
-    setY(y);
   }
 
   const numCols = 20;
-  const numRows = 10;
 
   const [selX, setX] = useState(12);
-  const [selY, setY] = useState(3);
 
   const items = [];
-  let y = 0;
 
-  for (let i = 1; i <= numCols * numRows; i++) {
+  for (let i = 1; i <= numCols; i++) {
 
     let x = i % numCols === 0 ? numCols : i % numCols;
-    y = (i - 1) % numCols === 0 ? y + 1 : y;
 
-    items.push(React.createElement(Cell, { onSelectedChange: handleSelectedChange, key: 'c-' + i, i: i, x: x, y: y, selX: selX, selY: selY }));
+    items.push(React.createElement(Cell, { onSelectedChange: handleSelectedChange, key: 'c-' + i, i: i, x: x, selX: selX }));
   }
 
   return React.createElement(
     "div",
     null,
-    React.createElement(Configurator, { numCols: numCols, numRows: numRows, selX: selX, selY: selY }),
+    React.createElement(Configurator, { numCols: numCols, selX: selX }),
     React.createElement(
       "div",
       { className: "row" },
@@ -36,7 +31,7 @@ export function CSSColumns() {
         { className: "col" },
         React.createElement(
           "div",
-          { className: 'grid cols-' + numCols + ' rows-' + numRows },
+          { className: 'grid cols-' + numCols },
           items
         )
       )
@@ -46,30 +41,23 @@ export function CSSColumns() {
 
 function Cell(props) {
 
-  function handleCellClick(i, x, y, e) {
+  function handleCellClick(i, x, e) {
     e.preventDefault();
-    // console.log(`Clicked! i:${i} x:${x} y:${y}`);
-    props.onSelectedChange(x, y);
+    props.onSelectedChange(x);
   }
 
-  let cellClass = 'cell ' + props.i + ' x-' + props.x + ' y-' + props.y;
+  let cellClass = 'cell ' + props.i + ' x-' + props.x;
 
   // Selected cell
-  cellClass += props.x === props.selX && props.y === props.selY ? ' sel' : '';
+  cellClass += props.x === props.selX ? ' sel' : '';
 
   // Surrounding cells
-  cellClass += props.y === props.selY && (props.x === props.selX - 1 || props.x === props.selX + 1) ? ' sel-1' : '';
-  cellClass += props.x === props.selX && (props.y === props.selY - 1 || props.y === props.selY + 1) ? ' sel-1' : '';
-  cellClass += props.x === props.selX && (props.y === props.selY - 2 || props.y === props.selY + 2) ? ' sel-2' : '';
-  cellClass += props.y === props.selY && (props.x === props.selX - 2 || props.x === props.selX + 2) ? ' sel-2' : '';
-  cellClass += props.x === props.selX - 1 && props.y === props.selY - 1 ? ' sel-2' : '';
-  cellClass += props.x === props.selX - 1 && props.y === props.selY + 1 ? ' sel-2' : '';
-  cellClass += props.x === props.selX + 1 && props.y === props.selY - 1 ? ' sel-2' : '';
-  cellClass += props.x === props.selX + 1 && props.y === props.selY + 1 ? ' sel-2' : '';
+  cellClass += props.x === props.selX - 1 || props.x === props.selX + 1 ? ' sel-1' : '';
+  cellClass += props.x === props.selX - 2 || props.x === props.selX + 2 ? ' sel-2' : '';
 
   return React.createElement(
     "div",
-    { className: cellClass, onClick: e => handleCellClick(props.i, props.x, props.y, e) },
+    { className: cellClass, onClick: e => handleCellClick(props.i, props.x, e) },
     React.createElement(
       "p",
       null,
@@ -82,7 +70,7 @@ function Configurator(props) {
 
   return React.createElement(
     "div",
-    { className: "row justify-content-center mb-5" },
+    { className: "settings row justify-content-center mb-5" },
     React.createElement(
       "div",
       { className: "col col-2" },
@@ -94,7 +82,7 @@ function Configurator(props) {
           { htmlFor: "patternCols" },
           "Columns"
         ),
-        React.createElement("input", { type: "number", className: "form-control", id: "patternCols", "aria-describedby": "patternColsNote", placeholder: props.numCols, min: "5", max: "20" }),
+        React.createElement("input", { type: "number", className: "form-control", id: "patternCols", "aria-describedby": "patternColsNote", placeholder: props.numCols, min: "5", max: "30" }),
         React.createElement(
           "small",
           { id: "patternColsNote", className: "form-text text-muted" },
@@ -105,31 +93,6 @@ function Configurator(props) {
             "x"
           ),
           " columns"
-        )
-      )
-    ),
-    React.createElement(
-      "div",
-      { className: "col col-2" },
-      React.createElement(
-        "div",
-        { className: "form-group" },
-        React.createElement(
-          "label",
-          { htmlFor: "patternRows" },
-          "Rows"
-        ),
-        React.createElement("input", { type: "number", className: "form-control", id: "patternRows", "aria-describedby": "patternRowsNote", placeholder: props.numRows, min: "1", max: "10" }),
-        React.createElement(
-          "small",
-          { id: "patternRowsNote", className: "form-text text-muted" },
-          "Number of ",
-          React.createElement(
-            "strong",
-            null,
-            "y"
-          ),
-          " rows"
         )
       )
     ),
@@ -153,30 +116,6 @@ function Configurator(props) {
             "strong",
             null,
             "x"
-          )
-        )
-      )
-    ),
-    React.createElement(
-      "div",
-      { className: "col col-2" },
-      React.createElement(
-        "div",
-        { className: "form-group" },
-        React.createElement(
-          "label",
-          { htmlFor: "selectedY" },
-          "Selected Y"
-        ),
-        React.createElement("input", { type: "number", className: "form-control", id: "selectedY", "aria-describedby": "selectedYNote", placeholder: "1-10", min: "1", max: "10", value: props.selY, readOnly: true }),
-        React.createElement(
-          "small",
-          { id: "selectedYNote", className: "form-text text-muted" },
-          "Initial ",
-          React.createElement(
-            "strong",
-            null,
-            "y"
           )
         )
       )

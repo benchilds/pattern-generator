@@ -74,7 +74,7 @@ function Cell(props) {
 function Configurator(props) {
 
   return (
-    <div className="row justify-content-center mb-5">
+    <div className="settings row justify-content-center mb-5">
       <div className="col col-2">
         <div className="form-group">
           <label htmlFor="patternCols">Columns</label>

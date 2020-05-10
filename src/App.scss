@@ -46,12 +46,20 @@ h1, h2, h3, h4, h5 { font-weight: 500; }
 
 /* COMPONENTS ----------------------------------------------------------------*/
 
-// <CSSGrid/>
+// <CSSGrid/> & <CSSColumns/>
 .css-grid,
 .css-columns {
   max-width: $grid-width;
   margin: 1rem auto;
   background-color: transparent;
+
+  .settings {
+    label {
+      color: $grey2;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+  }
 
   .grid {
     display: flex;
@@ -103,10 +111,30 @@ h1, h2, h3, h4, h5 { font-weight: 500; }
     &.cols-7 { .cell { flex-basis: calc(#{$grid-width}/7); min-height: calc(#{$grid-width}/7); p {line-height: calc(#{$grid-width}/7);} } }
     &.cols-6 { .cell { flex-basis: calc(#{$grid-width}/6); min-height: calc(#{$grid-width}/6); p {line-height: calc(#{$grid-width}/6);} } }
     &.cols-5 { .cell { flex-basis: calc(#{$grid-width}/5); min-height: calc(#{$grid-width}/5); p {line-height: calc(#{$grid-width}/5);} } }
-  }
 
-  &.pattern-specific-stuff {
-    color: red;
   }
+  
+}
 
+// <CSSColumns/>
+
+.css-columns {
+  .grid {
+    &.cols-20 { .cell { flex-basis: calc(#{$grid-width}/20); min-height: 400px; p {line-height: 400px;} } }
+    &.cols-19 { .cell { flex-basis: calc(#{$grid-width}/19); min-height: 400px; p {line-height: 400px;} } }
+    &.cols-18 { .cell { flex-basis: calc(#{$grid-width}/18); min-height: 400px; p {line-height: 400px;} } }
+    &.cols-17 { .cell { flex-basis: calc(#{$grid-width}/17); min-height: 400px; p {line-height: 400px;} } }
+    &.cols-16 { .cell { flex-basis: calc(#{$grid-width}/16); min-height: 400px; p {line-height: 400px;} } }
+    &.cols-15 { .cell { flex-basis: calc(#{$grid-width}/15); min-height: 400px; p {line-height: 400px;} } }
+    &.cols-14 { .cell { flex-basis: calc(#{$grid-width}/14); min-height: 400px; p {line-height: 400px;} } }
+    &.cols-13 { .cell { flex-basis: calc(#{$grid-width}/13); min-height: 400px; p {line-height: 400px;} } }
+    &.cols-12 { .cell { flex-basis: calc(#{$grid-width}/12); min-height: 400px; p {line-height: 400px;} } }
+    &.cols-11 { .cell { flex-basis: calc(#{$grid-width}/11); min-height: 400px; p {line-height: 400px;} } }
+    &.cols-10 { .cell { flex-basis: calc(#{$grid-width}/10); min-height: 400px; p {line-height: 400px;} } }
+    &.cols-9 { .cell { flex-basis: calc(#{$grid-width}/9); min-height: 400px; p {line-height: 400px;} } }
+    &.cols-8 { .cell { flex-basis: calc(#{$grid-width}/8); min-height: 400px; p {line-height: 400px;} } }
+    &.cols-7 { .cell { flex-basis: calc(#{$grid-width}/7); min-height: 400px; p {line-height: 400px;} } }
+    &.cols-6 { .cell { flex-basis: calc(#{$grid-width}/6); min-height: 400px; p {line-height: 400px;} } }
+    &.cols-5 { .cell { flex-basis: calc(#{$grid-width}/5); min-height: 400px; p {line-height: 400px;} } }
+  }
 }

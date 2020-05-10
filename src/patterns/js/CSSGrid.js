@@ -82,7 +82,7 @@ function Configurator(props) {
 
   return React.createElement(
     "div",
-    { className: "row justify-content-center mb-5" },
+    { className: "settings row justify-content-center mb-5" },
     React.createElement(
       "div",
       { className: "col col-2" },

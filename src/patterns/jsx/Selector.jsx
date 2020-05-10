@@ -5,8 +5,7 @@ export function Selector(props) {
   console.log(`Configurator`);
 
   function handleSelectedChange(e) {
-    // e.preventDefault();
-    console.log(`Pattern changed! pattern:${e.target.value}`);
+    // console.log(`Pattern changed! pattern:${e.target.value}`);
     props.onSelectedChange(e.target.value);
   }
 
