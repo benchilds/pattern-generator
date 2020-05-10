@@ -7,20 +7,19 @@ import './App.scss';
 
 function App() {
 
-  const [pattern, setPattern] = useState('grid');
-  const togglePattern = () => setPattern(pattern === 'grid' ? 'columns' : 'grid');
+  const [pattern, setPattern] = useState('cssGrid');
+  const handlePatternChange = (pattern) => setPattern(pattern);
 
   return (
     <div>
       <div className="config container">
-        <Selector />
-        <button type="button" onClick={togglePattern}>Toggle Pattern</button>
+        <Selector onSelectedChange={handlePatternChange} />
       </div>
       <div className="css-grid container-fluid p-0">
-        {pattern === 'grid' && <CSSGrid />}
+        {pattern === 'cssGrid' && <CSSGrid />}
       </div>
       <div className="css-columns container-fluid p-0">
-        {pattern === 'columns' && <CSSColumns />}
+        {pattern === 'cssColumns' && <CSSColumns />}
       </div>
     </div>
   );

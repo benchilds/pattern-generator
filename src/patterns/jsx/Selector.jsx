@@ -1,8 +1,14 @@
 import React from "react";
 
-export function Selector() {
+export function Selector(props) {
 
   console.log(`Configurator`);
+
+  function handleSelectedChange(e) {
+    // e.preventDefault();
+    console.log(`Pattern changed! pattern:${e.target.value}`);
+    props.onSelectedChange(e.target.value);
+  }
 
   return (
     <div>
@@ -15,11 +21,11 @@ export function Selector() {
         <div className="col col-4">
           <div className="form-group">
             <label htmlFor="patternType">Pattern</label>
-            <select class="form-control" id="patternType" aria-describedby="patternTypeNote">
-              <option>Grid pattern (CSS)</option>
-              <option>Columns pattern (CSS)</option>
-              <option disabled>Rows pattern (CSS)</option>
-              <option disabled>Lines (D3.js)</option>
+            <select onChange={(e) => handleSelectedChange(e)} className="form-control" id="patternType" aria-describedby="patternTypeNote">
+              <option value="cssGrid">Grid pattern (CSS)</option>
+              <option value="cssColumns">Columns pattern (CSS)</option>
+              <option value="cssRows" disabled>Rows pattern (CSS)</option>
+              <option value="d3Lines" disabled>Lines (D3.js)</option>
             </select>
             <small id="patternTypeNote" className="form-text text-muted">Type of pattern to generate</small>
           </div>

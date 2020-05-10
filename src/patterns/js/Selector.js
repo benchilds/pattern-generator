@@ -1,8 +1,14 @@
 import React from "react";
 
-export function Selector() {
+export function Selector(props) {
 
   console.log(`Configurator`);
+
+  function handleSelectedChange(e) {
+    // e.preventDefault();
+    console.log(`Pattern changed! pattern:${e.target.value}`);
+    props.onSelectedChange(e.target.value);
+  }
 
   return React.createElement(
     "div",
@@ -36,25 +42,25 @@ export function Selector() {
           ),
           React.createElement(
             "select",
-            { "class": "form-control", id: "patternType", "aria-describedby": "patternTypeNote" },
+            { onChange: e => handleSelectedChange(e), className: "form-control", id: "patternType", "aria-describedby": "patternTypeNote" },
             React.createElement(
               "option",
-              null,
+              { value: "cssGrid" },
               "Grid pattern (CSS)"
             ),
             React.createElement(
               "option",
-              null,
+              { value: "cssColumns" },
               "Columns pattern (CSS)"
             ),
             React.createElement(
               "option",
-              { disabled: true },
+              { value: "cssRows", disabled: true },
               "Rows pattern (CSS)"
             ),
             React.createElement(
               "option",
-              { disabled: true },
+              { value: "d3Lines", disabled: true },
               "Lines (D3.js)"
             )
           ),
