@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/benchilds/pattern-generator/static/css/main.6cfda8b5.chunk.css",
-    "main.js": "/benchilds/pattern-generator/static/js/main.026add46.chunk.js",
-    "main.js.map": "/benchilds/pattern-generator/static/js/main.026add46.chunk.js.map",
-    "runtime-main.js": "/benchilds/pattern-generator/static/js/runtime-main.ec3fc75e.js",
-    "runtime-main.js.map": "/benchilds/pattern-generator/static/js/runtime-main.ec3fc75e.js.map",
-    "static/js/2.3b72252a.chunk.js": "/benchilds/pattern-generator/static/js/2.3b72252a.chunk.js",
-    "static/js/2.3b72252a.chunk.js.map": "/benchilds/pattern-generator/static/js/2.3b72252a.chunk.js.map",
-    "index.html": "/benchilds/pattern-generator/index.html",
-    "precache-manifest.e399344f4a960f06ebe8375521b0ddb2.js": "/benchilds/pattern-generator/precache-manifest.e399344f4a960f06ebe8375521b0ddb2.js",
-    "service-worker.js": "/benchilds/pattern-generator/service-worker.js",
-    "static/css/main.6cfda8b5.chunk.css.map": "/benchilds/pattern-generator/static/css/main.6cfda8b5.chunk.css.map",
-    "static/js/2.3b72252a.chunk.js.LICENSE.txt": "/benchilds/pattern-generator/static/js/2.3b72252a.chunk.js.LICENSE.txt"
+    "main.css": "/pattern-generator/static/css/main.6cfda8b5.chunk.css",
+    "main.js": "/pattern-generator/static/js/main.328e8da9.chunk.js",
+    "main.js.map": "/pattern-generator/static/js/main.328e8da9.chunk.js.map",
+    "runtime-main.js": "/pattern-generator/static/js/runtime-main.343e660d.js",
+    "runtime-main.js.map": "/pattern-generator/static/js/runtime-main.343e660d.js.map",
+    "static/js/2.3b72252a.chunk.js": "/pattern-generator/static/js/2.3b72252a.chunk.js",
+    "static/js/2.3b72252a.chunk.js.map": "/pattern-generator/static/js/2.3b72252a.chunk.js.map",
+    "index.html": "/pattern-generator/index.html",
+    "precache-manifest.99dd98c945a1705ca1c517aed4165a75.js": "/pattern-generator/precache-manifest.99dd98c945a1705ca1c517aed4165a75.js",
+    "service-worker.js": "/pattern-generator/service-worker.js",
+    "static/css/main.6cfda8b5.chunk.css.map": "/pattern-generator/static/css/main.6cfda8b5.chunk.css.map",
+    "static/js/2.3b72252a.chunk.js.LICENSE.txt": "/pattern-generator/static/js/2.3b72252a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ec3fc75e.js",
+    "static/js/runtime-main.343e660d.js",
     "static/js/2.3b72252a.chunk.js",
     "static/css/main.6cfda8b5.chunk.css",
-    "static/js/main.026add46.chunk.js"
+    "static/js/main.328e8da9.chunk.js"
   ]
 }
