@@ -1,8 +1,12 @@
 /* VARIABLES -----------------------------------------------------------------*/
 /* Probably move to _variables.scss in future */
 
+// Layouts
+$pres-template-w: 1280px;
+$pres-template-h: 720px;
+
 // Dimensions
-$grid-width: 1024px;
+$grid-width: $pres-template-w;
 
 // Colours
 $black: #222222;
