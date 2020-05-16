@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { SVG } from '@svgdotjs/svg.js';
 
 export function SVGGrid() {
 
@@ -9,11 +10,19 @@ export function SVGGrid() {
   };
 
   const [numCols, setNumCols] = useState(20);
-  const [numRows, setNumRows] = useState(10);
+  const [numRows, setNumRows] = useState(4);
   const [selX, setX] = useState(2);
   const [selY, setY] = useState(3);
+  const svgW = 1280;
+  const svgH = 720;
   const items = [];
   let y = 0;
+
+  // Calculate (and draw?) the SVG
+
+  let draw = SVG('#svg-js').size(svgW, svgH);
+  let rect = draw.rect(100, 100).attr({ fill: '#f06' });
+  rect = draw.rect(50, 50).move(110, 0).attr({ fill: '#f06' });
 
   for (let i = 1; i <= numCols * numRows; i++) {
 
@@ -24,22 +33,10 @@ export function SVGGrid() {
   }
 
   return React.createElement(
-    "div",
+    'div',
     null,
     React.createElement(Configurator, { onColsChange: handleColsChange, onRowsChange: handleRowsChange, numCols: numCols, numRows: numRows, selX: selX, selY: selY }),
-    React.createElement(
-      "div",
-      { className: "row" },
-      React.createElement(
-        "div",
-        { className: "col" },
-        React.createElement(
-          "div",
-          { className: 'grid cols-' + numCols + ' rows-' + numRows },
-          items
-        )
-      )
-    )
+    React.createElement('div', null)
   );
 }
 
@@ -67,10 +64,10 @@ function Cell(props) {
   cellClass += props.x === props.selX + 1 && props.y === props.selY + 1 ? ' sel-2' : '';
 
   return React.createElement(
-    "div",
+    'div',
     { className: cellClass, onClick: e => handleCellClick(props.i, props.x, props.y, e) },
     React.createElement(
-      "p",
+      'p',
       null,
       props.i
     )
@@ -90,105 +87,105 @@ function Configurator(props) {
   }
 
   return React.createElement(
-    "div",
-    { className: "settings row justify-content-center mb-5" },
+    'div',
+    { className: 'settings row justify-content-center mb-5' },
     React.createElement(
-      "div",
-      { className: "col col-2" },
+      'div',
+      { className: 'col col-2' },
       React.createElement(
-        "div",
-        { className: "form-group" },
+        'div',
+        { className: 'form-group' },
         React.createElement(
-          "label",
-          { htmlFor: "patternCols" },
-          "Columns"
+          'label',
+          { htmlFor: 'patternCols' },
+          'Columns'
         ),
-        React.createElement("input", { onChange: e => handleColsChange(e), type: "number", className: "form-control", id: "patternCols", "aria-describedby": "patternColsNote", placeholder: "2-25", min: "2", max: "25", value: props.numCols }),
+        React.createElement('input', { onChange: e => handleColsChange(e), type: 'number', className: 'form-control', id: 'patternCols', 'aria-describedby': 'patternColsNote', placeholder: '2-25', min: '2', max: '25', value: props.numCols }),
         React.createElement(
-          "small",
-          { id: "patternColsNote", className: "form-text text-muted" },
-          "Enter ",
+          'small',
+          { id: 'patternColsNote', className: 'form-text text-muted' },
+          'Enter ',
           React.createElement(
-            "strong",
+            'strong',
             null,
-            "2-25"
+            '2-25'
           ),
-          " columns"
+          ' columns'
         )
       )
     ),
     React.createElement(
-      "div",
-      { className: "col col-2" },
+      'div',
+      { className: 'col col-2' },
       React.createElement(
-        "div",
-        { className: "form-group" },
+        'div',
+        { className: 'form-group' },
         React.createElement(
-          "label",
-          { htmlFor: "patternRows" },
-          "Rows"
+          'label',
+          { htmlFor: 'patternRows' },
+          'Rows'
         ),
-        React.createElement("input", { onChange: e => handleRowsChange(e), type: "number", className: "form-control", id: "patternRows", "aria-describedby": "patternRowsNote", placeholder: "1-20", min: "1", max: "20", value: props.numRows }),
+        React.createElement('input', { onChange: e => handleRowsChange(e), type: 'number', className: 'form-control', id: 'patternRows', 'aria-describedby': 'patternRowsNote', placeholder: '1-20', min: '1', max: '20', value: props.numRows }),
         React.createElement(
-          "small",
-          { id: "patternRowsNote", className: "form-text text-muted" },
-          "Enter ",
+          'small',
+          { id: 'patternRowsNote', className: 'form-text text-muted' },
+          'Enter ',
           React.createElement(
-            "strong",
+            'strong',
             null,
-            "1-20"
+            '1-20'
           ),
-          " rows"
+          ' rows'
         )
       )
     ),
     React.createElement(
-      "div",
-      { className: "col col-2" },
+      'div',
+      { className: 'col col-2' },
       React.createElement(
-        "div",
-        { className: "form-group" },
+        'div',
+        { className: 'form-group' },
         React.createElement(
-          "label",
-          { htmlFor: "selectedX" },
-          "Selected X"
+          'label',
+          { htmlFor: 'selectedX' },
+          'Selected X'
         ),
-        React.createElement("input", { type: "number", className: "form-control", id: "selectedX", "aria-describedby": "selectedXNote", placeholder: "5-20", min: "5", max: "20", value: props.selX, readOnly: true }),
+        React.createElement('input', { type: 'number', className: 'form-control', id: 'selectedX', 'aria-describedby': 'selectedXNote', placeholder: '5-20', min: '5', max: '20', value: props.selX, readOnly: true }),
         React.createElement(
-          "small",
-          { id: "selectedXNote", className: "form-text text-muted" },
-          "Selected ",
+          'small',
+          { id: 'selectedXNote', className: 'form-text text-muted' },
+          'Selected ',
           React.createElement(
-            "strong",
+            'strong',
             null,
-            "x"
+            'x'
           ),
-          " column"
+          ' column'
         )
       )
     ),
     React.createElement(
-      "div",
-      { className: "col col-2" },
+      'div',
+      { className: 'col col-2' },
       React.createElement(
-        "div",
-        { className: "form-group" },
+        'div',
+        { className: 'form-group' },
         React.createElement(
-          "label",
-          { htmlFor: "selectedY" },
-          "Selected Y"
+          'label',
+          { htmlFor: 'selectedY' },
+          'Selected Y'
         ),
-        React.createElement("input", { type: "number", className: "form-control", id: "selectedY", "aria-describedby": "selectedYNote", placeholder: "1-10", min: "1", max: "10", value: props.selY, readOnly: true }),
+        React.createElement('input', { type: 'number', className: 'form-control', id: 'selectedY', 'aria-describedby': 'selectedYNote', placeholder: '1-10', min: '1', max: '10', value: props.selY, readOnly: true }),
         React.createElement(
-          "small",
-          { id: "selectedYNote", className: "form-text text-muted" },
-          "Select ",
+          'small',
+          { id: 'selectedYNote', className: 'form-text text-muted' },
+          'Select ',
           React.createElement(
-            "strong",
+            'strong',
             null,
-            "y"
+            'y'
           ),
-          " row"
+          ' row'
         )
       )
     )

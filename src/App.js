@@ -22,8 +22,11 @@ function App() {
       <div className="css-columns container-fluid p-0">
         {pattern === 'cssColumns' && <CSSColumns />}
       </div>
-      <div className="css-grid container-fluid p-0">
-        {pattern === 'cssGrid' && <SVGGrid />}
+      <div className="svg-grid container-fluid p-0">
+        {pattern === 'svgGrid' && <SVGGrid />}
+        <div className="svg-js">
+          <svg id="svg-js"></svg>
+        </div>
       </div>
     </div>
   );

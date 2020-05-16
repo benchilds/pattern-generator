@@ -165,3 +165,12 @@ h1, h2, h3, h4, h5 { font-weight: 500; }
     &.cols-2 { .cell { flex-basis: calc(#{$grid-width}/2); min-height: 400px; p { line-height: 400px; } } }
   }
 }
+
+// <SVGGrid/>
+.svg-grid {
+
+  .svg-js {
+    text-align: center;
+  }
+
+}

@@ -1,18 +1,27 @@
 import React, { useState } from "react";
+import { SVG } from '@svgdotjs/svg.js';
 
 export function SVGGrid() {
 
   const handleColsChange = (numCols) => setNumCols(numCols);
   const handleRowsChange = (numRows) => setNumRows(numRows);
   const handleSelectedChange = (x, y) => {setX(x); setY(y); }
-
+  
   const [numCols, setNumCols] = useState(20);
-  const [numRows, setNumRows] = useState(10);
+  const [numRows, setNumRows] = useState(4);
   const [selX, setX] = useState(2);
   const [selY, setY] = useState(3);
+  const svgW = 1280;
+  const svgH = 720;
   const items = []
   let y = 0;
   
+  // Calculate (and draw?) the SVG
+
+  let draw = SVG('#svg-js').size(svgW, svgH);
+  let rect = draw.rect(100, 100).attr({ fill: '#f06' });
+  rect = draw.rect(50, 50).move(110, 0).attr({ fill: '#f06' });
+
   for (let i = 1; i <= numCols * numRows; i++) {
     
     let x = i % numCols === 0 ? numCols : i % numCols;
@@ -25,12 +34,8 @@ export function SVGGrid() {
   return (
     <div>
       <Configurator onColsChange={handleColsChange} onRowsChange={handleRowsChange} numCols={numCols} numRows={numRows} selX={selX} selY={selY}/>
-      <div className="row">
-        <div className="col">
-          <div className={'grid cols-' + numCols + ' rows-' + numRows}>
-            {items}
-          </div>
-        </div>
+      <div>
+        {/* {items} */}
       </div>
     </div>
   );
