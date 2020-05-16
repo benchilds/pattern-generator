@@ -52,6 +52,11 @@ export function Selector(props) {
             ),
             React.createElement(
               "option",
+              { value: "cssGrid" },
+              "Grid pattern (SVG)"
+            ),
+            React.createElement(
+              "option",
               { value: "cssRows", disabled: true },
               "Rows pattern (CSS)"
             ),
