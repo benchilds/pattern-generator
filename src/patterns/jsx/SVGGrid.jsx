@@ -3,25 +3,25 @@ import { SVG } from '@svgdotjs/svg.js';
 
 export function SVGGrid() {
 
-  const handleColsChange = (numCols) => setNumCols(numCols);
-  const handleRowsChange = (numRows) => setNumRows(numRows);
-  const handleSelectedChange = (x, y) => {setX(x); setY(y); }
+  const handleColsChange = (numCols) => {
+    setNumCols(numCols);
+    setCellSize(svgW/numCols);
+    setNumRows(Math.floor(svgH/cellSize));
+  }
   
   const svgW = 1280;
   const svgH = 720;
-  const [numCols, setNumCols] = useState(20);
+  const [numCols, setNumCols] = useState(16);
   console.log(`numCols: ${numCols}`);
-  const cellSize = svgW / numCols;
+  const [cellSize, setCellSize] = useState(svgW/numCols);
   console.log(`cellSize: ${cellSize}`);
   const [numRows, setNumRows] = useState(Math.floor(svgH/cellSize));
   console.log(`numRows: ${numRows}`);
   const rowRem = svgH % cellSize;
   console.log(`rowRem: ${rowRem}`);
   const [selX, setX] = useState(2);
-  console.log(`selX: ${selX}`);
   const [selY, setY] = useState(3);
-  console.log(`selY: ${selY}`);
-  // const items = []
+
   let rowNum = 1;
   let colNum = 1;
   let fullRow = rowRem > 0 ? false : true;
@@ -30,14 +30,16 @@ export function SVGGrid() {
   console.log(`fullRow: ${fullRow}`);
   let rect;
   
-  // Calculate (and draw?) the SVG
+  // Calculate and draw the SVG
+  // Unfortunately, using svg.js this is detached from React and hence the whole SVG is re-rendered for every change
+  // @todo: Consider just drawing an SVG natively using React Components
 
   let draw = SVG('#svg-js').size(svgW, svgH);
   
   for (let i = 1; i <= numCols * (numRows + 2); i++) {
 
     cellHeight = fullRow ? cellSize : rowRem / 2;
-    console.log(`rowNum: ${rowNum}, colNum: ${colNum}, fullRow: ${fullRow}, cellHeight: ${cellHeight}, rowOffset: ${rowOffset}`);
+    console.log(`nC: ${numCols}, cS: ${cellSize}, nR: ${numRows}, rN: ${rowNum}, cN: ${colNum}, fR: ${fullRow}, cH: ${cellHeight}, rOff: ${rowOffset}`);
     rect = draw.rect(cellSize, cellHeight).move((colNum - 1) * cellSize, rowOffset).attr({ fill: '#747474', stroke: '#222222' });
     
     rowNum = colNum === numCols ? rowNum + 1 : rowNum;
@@ -49,38 +51,7 @@ export function SVGGrid() {
 
   return (
     <div>
-      <Configurator onColsChange={handleColsChange} onRowsChange={handleRowsChange} numCols={numCols} numRows={numRows} selX={selX} selY={selY}/>
-    </div>
-  );
-
-}
-
-function Cell(props) {
-
-  function handleCellClick(i, x, y, e) {
-    e.preventDefault();
-    // console.log(`Clicked! i:${i} x:${x} y:${y}`);
-    props.onSelectedChange(x, y);
-  }
-  
-  let cellClass = 'cell ' + props.i + ' x-' + props.x + ' y-' + props.y;
-  
-  // Selected cell
-  cellClass += props.x === props.selX && props.y === props.selY ? ' sel' : '';
-  
-  // Surrounding cells
-  // cellClass += (props.y === props.selY && (props.x === props.selX - 1 || props.x === props.selX + 1)) ? ' sel-1' : '';
-  // cellClass += (props.x === props.selX && (props.y === props.selY - 1 || props.y === props.selY + 1)) ? ' sel-1' : '';
-  // cellClass += (props.x === props.selX && (props.y === props.selY - 2 || props.y === props.selY + 2)) ? ' sel-2' : '';
-  // cellClass += (props.y === props.selY && (props.x === props.selX - 2 || props.x === props.selX + 2)) ? ' sel-2' : '';
-  // cellClass += (props.x === props.selX - 1 && props.y === props.selY - 1) ? ' sel-2' : '';
-  // cellClass += (props.x === props.selX - 1 && props.y === props.selY + 1) ? ' sel-2' : '';
-  // cellClass += (props.x === props.selX + 1 && props.y === props.selY - 1) ? ' sel-2' : '';
-  // cellClass += (props.x === props.selX + 1 && props.y === props.selY + 1) ? ' sel-2' : '';
-  
-  return (
-    <div className={cellClass} onClick={(e) => handleCellClick(props.i, props.x, props.y, e)}>
-      <p>{props.i}</p>
+      <Configurator onColsChange={handleColsChange} numCols={numCols} numRows={numRows} selX={selX} selY={selY}/>
     </div>
   );
 
