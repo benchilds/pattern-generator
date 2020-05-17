@@ -24,20 +24,25 @@ export function SVGGrid() {
   // const items = []
   let rowNum = 1;
   let colNum = 1;
-  let x = 1;
-  let y = 1;
+  let fullRow = rowRem > 0 ? false : true;
+  let rowOffset = 0;
+  let cellHeight = cellSize;
+  console.log(`fullRow: ${fullRow}`);
   let rect;
   
   // Calculate (and draw?) the SVG
 
   let draw = SVG('#svg-js').size(svgW, svgH);
   
-  for (let i = 1; i <= numCols * numRows; i++) {
+  for (let i = 1; i <= numCols * (numRows + 2); i++) {
 
-    console.log(`rowNum: ${rowNum}, colNum: ${colNum}`);
-    rect = draw.rect(cellSize, cellSize).move((colNum - 1) * cellSize, (rowNum - 1) * cellSize).attr({ fill: '#f06', stroke: '#fff' });
+    cellHeight = fullRow ? cellSize : rowRem / 2;
+    console.log(`rowNum: ${rowNum}, colNum: ${colNum}, fullRow: ${fullRow}, cellHeight: ${cellHeight}, rowOffset: ${rowOffset}`);
+    rect = draw.rect(cellSize, cellHeight).move((colNum - 1) * cellSize, rowOffset).attr({ fill: '#747474', stroke: '#222222' });
     
     rowNum = colNum === numCols ? rowNum + 1 : rowNum;
+    fullRow = (rowRem === 0 || (rowRem > 0 && rowNum > 1 && rowNum < numRows + 2)) ? true : false;
+    rowOffset = colNum === numCols ? rowOffset + cellHeight : rowOffset;
     colNum = colNum === numCols ? 1 : colNum + 1;
   
   }
