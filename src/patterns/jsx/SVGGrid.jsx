@@ -7,36 +7,44 @@ export function SVGGrid() {
   const handleRowsChange = (numRows) => setNumRows(numRows);
   const handleSelectedChange = (x, y) => {setX(x); setY(y); }
   
-  const [numCols, setNumCols] = useState(20);
-  const [numRows, setNumRows] = useState(4);
-  const [selX, setX] = useState(2);
-  const [selY, setY] = useState(3);
   const svgW = 1280;
   const svgH = 720;
-  const items = []
-  let y = 0;
+  const [numCols, setNumCols] = useState(20);
+  console.log(`numCols: ${numCols}`);
+  const cellSize = svgW / numCols;
+  console.log(`cellSize: ${cellSize}`);
+  const [numRows, setNumRows] = useState(Math.floor(svgH/cellSize));
+  console.log(`numRows: ${numRows}`);
+  const rowRem = svgH % cellSize;
+  console.log(`rowRem: ${rowRem}`);
+  const [selX, setX] = useState(2);
+  console.log(`selX: ${selX}`);
+  const [selY, setY] = useState(3);
+  console.log(`selY: ${selY}`);
+  // const items = []
+  let rowNum = 1;
+  let colNum = 1;
+  let x = 1;
+  let y = 1;
+  let rect;
   
   // Calculate (and draw?) the SVG
 
   let draw = SVG('#svg-js').size(svgW, svgH);
-  let rect = draw.rect(100, 100).attr({ fill: '#f06' });
-  rect = draw.rect(50, 50).move(110, 0).attr({ fill: '#f06' });
-
+  
   for (let i = 1; i <= numCols * numRows; i++) {
-    
-    let x = i % numCols === 0 ? numCols : i % numCols;
-    y = (i - 1) % numCols === 0 ? y + 1 : y;
 
-    items.push(<Cell onSelectedChange={handleSelectedChange} key={'c-'+i} i={i} x={x} y={y} selX={selX} selY={selY} />);
+    console.log(`rowNum: ${rowNum}, colNum: ${colNum}`);
+    rect = draw.rect(cellSize, cellSize).move((colNum - 1) * cellSize, (rowNum - 1) * cellSize).attr({ fill: '#f06', stroke: '#fff' });
+    
+    rowNum = colNum === numCols ? rowNum + 1 : rowNum;
+    colNum = colNum === numCols ? 1 : colNum + 1;
   
   }
 
   return (
     <div>
       <Configurator onColsChange={handleColsChange} onRowsChange={handleRowsChange} numCols={numCols} numRows={numRows} selX={selX} selY={selY}/>
-      <div>
-        {/* {items} */}
-      </div>
     </div>
   );
 
@@ -56,14 +64,14 @@ function Cell(props) {
   cellClass += props.x === props.selX && props.y === props.selY ? ' sel' : '';
   
   // Surrounding cells
-  cellClass += (props.y === props.selY && (props.x === props.selX - 1 || props.x === props.selX + 1)) ? ' sel-1' : '';
-  cellClass += (props.x === props.selX && (props.y === props.selY - 1 || props.y === props.selY + 1)) ? ' sel-1' : '';
-  cellClass += (props.x === props.selX && (props.y === props.selY - 2 || props.y === props.selY + 2)) ? ' sel-2' : '';
-  cellClass += (props.y === props.selY && (props.x === props.selX - 2 || props.x === props.selX + 2)) ? ' sel-2' : '';
-  cellClass += (props.x === props.selX - 1 && props.y === props.selY - 1) ? ' sel-2' : '';
-  cellClass += (props.x === props.selX - 1 && props.y === props.selY + 1) ? ' sel-2' : '';
-  cellClass += (props.x === props.selX + 1 && props.y === props.selY - 1) ? ' sel-2' : '';
-  cellClass += (props.x === props.selX + 1 && props.y === props.selY + 1) ? ' sel-2' : '';
+  // cellClass += (props.y === props.selY && (props.x === props.selX - 1 || props.x === props.selX + 1)) ? ' sel-1' : '';
+  // cellClass += (props.x === props.selX && (props.y === props.selY - 1 || props.y === props.selY + 1)) ? ' sel-1' : '';
+  // cellClass += (props.x === props.selX && (props.y === props.selY - 2 || props.y === props.selY + 2)) ? ' sel-2' : '';
+  // cellClass += (props.y === props.selY && (props.x === props.selX - 2 || props.x === props.selX + 2)) ? ' sel-2' : '';
+  // cellClass += (props.x === props.selX - 1 && props.y === props.selY - 1) ? ' sel-2' : '';
+  // cellClass += (props.x === props.selX - 1 && props.y === props.selY + 1) ? ' sel-2' : '';
+  // cellClass += (props.x === props.selX + 1 && props.y === props.selY - 1) ? ' sel-2' : '';
+  // cellClass += (props.x === props.selX + 1 && props.y === props.selY + 1) ? ' sel-2' : '';
   
   return (
     <div className={cellClass} onClick={(e) => handleCellClick(props.i, props.x, props.y, e)}>
@@ -80,11 +88,6 @@ function Configurator(props) {
     props.onColsChange(e.target.value);
   }
 
-  function handleRowsChange(e) {
-    // console.log(`Rows changed! patternRows:${e.target.value}`);
-    props.onRowsChange(e.target.value);
-  }
-
   return (
     <div className="settings row justify-content-center mb-5">
       <div className="col col-2">
@@ -97,8 +100,8 @@ function Configurator(props) {
       <div className="col col-2">
         <div className="form-group">
           <label htmlFor="patternRows">Rows</label>
-          <input onChange={(e) => handleRowsChange(e)} type="number" className="form-control" id="patternRows" aria-describedby="patternRowsNote" placeholder="1-20" min="1" max="20" value={props.numRows} />
-          <small id="patternRowsNote" className="form-text text-muted">Enter <strong>1-20</strong> rows</small>
+          <input type="number" className="form-control" id="patternRows" aria-describedby="patternRowsNote" placeholder="1-20" min="1" max="20" value={props.numRows} readOnly />
+          <small id="patternRowsNote" className="form-text text-muted">Calculated rows</small>
         </div>
       </div>
       <div className="col col-2">
