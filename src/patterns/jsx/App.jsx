@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import { Selector } from './patterns/js/Selector';
-import { CSSGrid } from './patterns/js/CSSGrid';
-import { CSSColumns } from './patterns/js/CSSColumns';
-import { SVGGrid } from './patterns/js/SVGGrid';
+import { Selector } from './Selector';
+import { CSSGrid } from './CSSGrid';
+import { CSSColumns } from './CSSColumns';
+import { SVGGrid } from './SVGGrid';
 
-import './App.scss';
+import '../scss/App.scss';
 
 function App() {
 
