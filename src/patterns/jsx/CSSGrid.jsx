@@ -23,7 +23,7 @@ export function CSSGrid() {
   }
 
   return (
-    <div>
+    <div className="css-grid container-fluid p-0">
       <Configurator onColsChange={handleColsChange} onRowsChange={handleRowsChange} numCols={numCols} numRows={numRows} selX={selX} selY={selY}/>
       <div className="row">
         <div className="col">

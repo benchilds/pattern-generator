@@ -50,8 +50,11 @@ export function SVGGrid() {
   }
 
   return (
-    <div>
+    <div className="svg-grid container-fluid p-0">
       <Configurator onColsChange={handleColsChange} numCols={numCols} numRows={numRows} selX={selX} selY={selY}/>
+      <div className="svg-js">
+        <svg id="svg-js"></svg>
+      </div>
     </div>
   );
 

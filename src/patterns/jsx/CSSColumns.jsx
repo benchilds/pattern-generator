@@ -18,7 +18,7 @@ export function CSSColumns() {
   }
 
   return (
-    <div>
+    <div className="css-columns container-fluid p-0">
       <Configurator onColsChange={handleColsChange} numCols={numCols} selX={selX} />
       <div className="row">
         <div className="col">

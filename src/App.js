@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { Selector } from './patterns/js/Selector';
 import { CSSGrid } from './patterns/js/CSSGrid';
 import { CSSColumns } from './patterns/js/CSSColumns';
+import { SVGHolder } from './patterns/js/SVGHolder';
 import { SVGGrid } from './patterns/js/SVGGrid';
 import { IMGTest } from './patterns/js/IMGTest';
 
@@ -17,21 +18,16 @@ function App() {
       <div className="config container">
         <Selector onSelectedChange={handlePatternChange} />
       </div>
-      <div className="css-grid container-fluid p-0">
-        {pattern === 'cssGrid' && <CSSGrid />}
-      </div>
+      {pattern === 'cssGrid' && <CSSGrid />}
+      {pattern === 'cssColumns' && <CSSColumns />}
+      {/* {pattern === 'imgTest' && <SVGHolder />} */}
       <div className="css-columns container-fluid p-0">
-        {pattern === 'cssColumns' && <CSSColumns />}
-      </div>
-      <div className="svg-grid container-fluid p-0">
-        {pattern === 'svgGrid' && <SVGGrid />}
         <div className="svg-js">
           <svg id="svg-js"></svg>
         </div>
       </div>
-      <div className="css-columns container-fluid p-0">
-        {pattern === 'imgTest' && <IMGTest />}
-      </div>
+      {pattern === 'svgGrid' && <SVGGrid />}
+      {pattern === 'imgTest' && <IMGTest />}
     </div>
   );
 }

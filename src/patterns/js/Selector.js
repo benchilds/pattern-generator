@@ -57,6 +57,11 @@ export function Selector(props) {
             ),
             React.createElement(
               "option",
+              { value: "imgTest" },
+              "Image test (IMG + SVG)"
+            ),
+            React.createElement(
+              "option",
               { value: "cssRows", disabled: true },
               "Rows pattern (CSS)"
             ),

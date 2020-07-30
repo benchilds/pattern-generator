@@ -50,8 +50,13 @@ export function SVGGrid() {
 
   return React.createElement(
     'div',
-    null,
-    React.createElement(Configurator, { onColsChange: handleColsChange, numCols: numCols, numRows: numRows, selX: selX, selY: selY })
+    { className: 'svg-grid container-fluid p-0' },
+    React.createElement(Configurator, { onColsChange: handleColsChange, numCols: numCols, numRows: numRows, selX: selX, selY: selY }),
+    React.createElement(
+      'div',
+      { className: 'svg-js' },
+      React.createElement('svg', { id: 'svg-js' })
+    )
   );
 }
 
