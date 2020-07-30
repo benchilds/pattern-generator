@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { SVG } from '@svgdotjs/svg.js';
+import html2canvas from 'html2canvas';
 
 export function IMGTest() {
 
@@ -48,6 +49,10 @@ export function IMGTest() {
     colNum = colNum === numCols ? 1 : colNum + 1;
   
   }
+
+  html2canvas(document.getElementById('svg-js')).then(function(canvas) {
+    document.body.appendChild(canvas);
+  });
 
   return (
     <div className="css-columns container-fluid p-0">
