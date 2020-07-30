@@ -3,6 +3,7 @@ import { Selector } from './patterns/js/Selector';
 import { CSSGrid } from './patterns/js/CSSGrid';
 import { CSSColumns } from './patterns/js/CSSColumns';
 import { SVGGrid } from './patterns/js/SVGGrid';
+import { IMGTest } from './patterns/js/IMGTest';
 
 import './App.scss';
 
@@ -27,6 +28,9 @@ function App() {
         <div className="svg-js">
           <svg id="svg-js"></svg>
         </div>
+      </div>
+      <div className="css-columns container-fluid p-0">
+        {pattern === 'imgTest' && <IMGTest />}
       </div>
     </div>
   );

@@ -22,6 +22,7 @@ export function Selector(props) {
               <option value="cssGrid">Grid pattern (CSS)</option>
               <option value="cssColumns">Columns pattern (CSS)</option>
               <option value="svgGrid">Grid pattern (SVG)</option>
+              <option value="imgTest">Image test (IMG + SVG)</option>
               <option value="cssRows" disabled>Rows pattern (CSS)</option>
               <option value="d3Lines" disabled>Lines (D3.js)</option>
             </select>
