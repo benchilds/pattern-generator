@@ -28,6 +28,7 @@ function App() {
       </div>
       {pattern === 'svgGrid' && <SVGGrid />}
       {pattern === 'imgTest' && <IMGTest />}
+      {pattern === 'svgHolder' && <SVGHolder />}
     </div>
   );
 }

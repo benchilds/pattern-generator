@@ -62,6 +62,11 @@ export function Selector(props) {
             ),
             React.createElement(
               "option",
+              { value: "svgHolder" },
+              "SVG Holder (SVG)"
+            ),
+            React.createElement(
+              "option",
               { value: "cssRows", disabled: true },
               "Rows pattern (CSS)"
             ),
