@@ -25,7 +25,7 @@ export function CSSGrid() {
 
   return React.createElement(
     "div",
-    null,
+    { className: "css-grid container-fluid p-0" },
     React.createElement(Configurator, { onColsChange: handleColsChange, onRowsChange: handleRowsChange, numCols: numCols, numRows: numRows, selX: selX, selY: selY }),
     React.createElement(
       "div",

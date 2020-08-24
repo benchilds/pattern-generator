@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
-export function Selector(props) {
+export function Customiser(props) {
+
+  const [patternSel, setPattern] = useState(props.patternSel);
 
   function handleSelectedChange(e) {
     // console.log(`Pattern changed! pattern:${e.target.value}`);
     props.onSelectedChange(e.target.value);
+    setPattern(e.target.value);
   }
 
   return React.createElement(
@@ -19,7 +22,7 @@ export function Selector(props) {
         React.createElement(
           "h2",
           null,
-          "Pattern configurator"
+          "Pattern customiser"
         )
       )
     ),
@@ -28,7 +31,7 @@ export function Selector(props) {
       { className: "row justify-content-center" },
       React.createElement(
         "div",
-        { className: "col col-4" },
+        { className: "col col-3" },
         React.createElement(
           "div",
           { className: "form-group" },
@@ -39,46 +42,36 @@ export function Selector(props) {
           ),
           React.createElement(
             "select",
-            { onChange: e => handleSelectedChange(e), className: "form-control", id: "patternType", "aria-describedby": "patternTypeNote" },
+            { onChange: e => handleSelectedChange(e), className: "form-control", id: "pattern", "aria-describedby": "patternTip", value: patternSel },
             React.createElement(
               "option",
-              { value: "cssGrid" },
-              "Grid pattern (CSS)"
+              { value: "slashesGrid" },
+              "Slashes grid"
             ),
             React.createElement(
               "option",
-              { value: "cssColumns" },
-              "Columns pattern (CSS)"
+              { value: "zigzagPattern" },
+              "Zig-zag pattern"
             ),
             React.createElement(
               "option",
-              { value: "svgGrid" },
-              "Grid pattern (SVG)"
+              { value: "diagonalBarsPattern" },
+              "Diagonal bars pattern"
             ),
             React.createElement(
               "option",
-              { value: "imgTest" },
-              "Image test (IMG + SVG)"
+              { value: "slashesPattern" },
+              "Slashes pattern"
             ),
             React.createElement(
               "option",
-              { value: "svgHolder" },
-              "SVG Holder (SVG)"
-            ),
-            React.createElement(
-              "option",
-              { value: "cssRows", disabled: true },
-              "Rows pattern (CSS)"
-            ),
-            React.createElement(
-              "option",
-              { value: "d3Lines", disabled: true },
-              "Lines (D3.js)"
+              { value: "pyramidPattern" },
+              "Pyramid pattern"
             )
           ),
           React.createElement(
             "small",
-            { id: "patternTypeNote", className: "form-text text-muted" },
+            { id: "patternTip", className: "form-text text-muted" },
             "Type of pattern to generate"
           )
         )

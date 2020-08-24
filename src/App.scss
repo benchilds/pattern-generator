@@ -1,8 +1,12 @@
 /* VARIABLES -----------------------------------------------------------------*/
 /* Probably move to _variables.scss in future */
 
+// Layouts
+$pres-template-w: 1280px;
+$pres-template-h: 720px;
+
 // Dimensions
-$grid-width: 1024px;
+$grid-width: $pres-template-w;
 
 // Colours
 $black: #222222;
@@ -47,6 +51,7 @@ h1, h2, h3, h4, h5 { font-weight: 500; }
 /* COMPONENTS ----------------------------------------------------------------*/
 
 // <CSSGrid/> & <CSSColumns/>
+.svg-holder,
 .css-grid,
 .css-columns {
   max-width: $grid-width;
@@ -160,4 +165,13 @@ h1, h2, h3, h4, h5 { font-weight: 500; }
     &.cols-3 { .cell { flex-basis: calc(#{$grid-width}/3); min-height: 400px; p { line-height: 400px; } } }
     &.cols-2 { .cell { flex-basis: calc(#{$grid-width}/2); min-height: 400px; p { line-height: 400px; } } }
   }
+}
+
+// <SVGGrid/>
+.svg-grid {
+
+  .svg-js {
+    text-align: center;
+  }
+
 }

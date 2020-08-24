@@ -18,7 +18,7 @@ export function CSSColumns() {
 
   return React.createElement(
     "div",
-    null,
+    { className: "css-columns container-fluid p-0" },
     React.createElement(Configurator, { onColsChange: handleColsChange, numCols: numCols, selX: selX }),
     React.createElement(
       "div",
