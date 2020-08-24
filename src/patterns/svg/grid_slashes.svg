@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280px" height="720px" viewBox="0 0 1280 720" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="patternHolder" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <rect id="bg" fill="#222222" x="0" y="0" width="1280" height="720"></rect>
+    <g id="pattern" transform="translate(0.000000, -17.000000)">
+      <g id="slashesGrid" transform="translate(0.000000, 17.000000)">
+        <g id="grid" fill="#222222">
+          <rect id="grid-c16-r9" x="1200" y="640" width="80" height="80"></rect>
+          <rect id="grid-c16-r8" x="1200" y="560" width="80" height="80"></rect>
+          <rect id="grid-c16-r7" x="1200" y="480" width="80" height="80"></rect>
+          <rect id="grid-c16-r6" x="1200" y="400" width="80" height="80"></rect>
+          <rect id="grid-c16-r5" x="1200" y="320" width="80" height="80"></rect>
+          <rect id="grid-c16-r4" x="1200" y="240" width="80" height="80"></rect>
+          <rect id="grid-c16-r3" x="1200" y="160" width="80" height="80"></rect>
+          <rect id="grid-c16-r2" x="1200" y="80" width="80" height="80"></rect>
+          <rect id="grid-c16-r1" x="1200" y="0" width="80" height="80"></rect>
+          <rect id="grid-c15-r9" x="1120" y="640" width="80" height="80"></rect>
+          <rect id="grid-c15-r8" x="1120" y="560" width="80" height="80"></rect>
+          <rect id="grid-c15-r7" x="1120" y="480" width="80" height="80"></rect>
+          <rect id="grid-c15-r6" x="1120" y="400" width="80" height="80"></rect>
+          <rect id="grid-c15-r5" x="1120" y="320" width="80" height="80"></rect>
+          <rect id="grid-c15-r4" x="1120" y="240" width="80" height="80"></rect>
+          <rect id="grid-c15-r3" x="1120" y="160" width="80" height="80"></rect>
+          <rect id="grid-c15-r2" x="1120" y="80" width="80" height="80"></rect>
+          <rect id="grid-c15-r1" x="1120" y="0" width="80" height="80"></rect>
+          <rect id="grid-c14-r9" x="1040" y="640" width="80" height="80"></rect>
+          <rect id="grid-c14-r8" x="1040" y="560" width="80" height="80"></rect>
+          <rect id="grid-c14-r7" x="1040" y="480" width="80" height="80"></rect>
+          <rect id="grid-c14-r6" x="1040" y="400" width="80" height="80"></rect>
+          <rect id="grid-c14-r5" x="1040" y="320" width="80" height="80"></rect>
+          <rect id="grid-c14-r4" x="1040" y="240" width="80" height="80"></rect>
+          <rect id="grid-c14-r3" x="1040" y="160" width="80" height="80"></rect>
+          <rect id="grid-c14-r2" x="1040" y="80" width="80" height="80"></rect>
+          <rect id="grid-c14-r1" x="1040" y="0" width="80" height="80"></rect>
+          <rect id="grid-c13-r9" x="960" y="640" width="80" height="80"></rect>
+          <rect id="grid-c13-r8" x="960" y="560" width="80" height="80"></rect>
+          <rect id="grid-c13-r7" x="960" y="480" width="80" height="80"></rect>
+          <rect id="grid-c13-r6" x="960" y="400" width="80" height="80"></rect>
+          <rect id="grid-c13-r5" x="960" y="320" width="80" height="80"></rect>
+          <rect id="grid-c13-r4" x="960" y="240" width="80" height="80"></rect>
+          <rect id="grid-c13-r3" x="960" y="160" width="80" height="80"></rect>
+          <rect id="grid-c13-r2" x="960" y="80" width="80" height="80"></rect>
+          <rect id="grid-c13-r1" x="960" y="0" width="80" height="80"></rect>
+          <rect id="grid-c12-r9" x="880" y="640" width="80" height="80"></rect>
+          <rect id="grid-c12-r8" x="880" y="560" width="80" height="80"></rect>
+          <rect id="grid-c12-r7" x="880" y="480" width="80" height="80"></rect>
+          <rect id="grid-c12-r6" x="880" y="400" width="80" height="80"></rect>
+          <rect id="grid-c12-r5" x="880" y="320" width="80" height="80"></rect>
+          <rect id="grid-c12-r4" x="880" y="240" width="80" height="80"></rect>
+          <rect id="grid-c12-r3" x="880" y="160" width="80" height="80"></rect>
+          <rect id="grid-c12-r2" x="880" y="80" width="80" height="80"></rect>
+          <rect id="grid-c12-r1" x="880" y="0" width="80" height="80"></rect>
+          <rect id="grid-c11-r9" x="800" y="640" width="80" height="80"></rect>
+          <rect id="grid-c11-r8" x="800" y="560" width="80" height="80"></rect>
+          <rect id="grid-c11-r7" x="800" y="480" width="80" height="80"></rect>
+          <rect id="grid-c11-r6" x="800" y="400" width="80" height="80"></rect>
+          <rect id="grid-c11-r5" x="800" y="320" width="80" height="80"></rect>
+          <rect id="grid-c11-r4" x="800" y="240" width="80" height="80"></rect>
+          <rect id="grid-c11-r3" x="800" y="160" width="80" height="80"></rect>
+          <rect id="grid-c11-r2" x="800" y="80" width="80" height="80"></rect>
+          <rect id="grid-c11-r1" x="800" y="0" width="80" height="80"></rect>
+          <rect id="grid-c10-r9" x="720" y="640" width="80" height="80"></rect>
+          <rect id="grid-c10-r8" x="720" y="560" width="80" height="80"></rect>
+          <rect id="grid-c10-r7" x="720" y="480" width="80" height="80"></rect>
+          <rect id="grid-c10-r6" x="720" y="400" width="80" height="80"></rect>
+          <rect id="grid-c10-r5" x="720" y="320" width="80" height="80"></rect>
+          <rect id="grid-c10-r4" x="720" y="240" width="80" height="80"></rect>
+          <rect id="grid-c10-r3" x="720" y="160" width="80" height="80"></rect>
+          <rect id="grid-c10-r2" x="720" y="80" width="80" height="80"></rect>
+          <rect id="grid-c10-r1" x="720" y="0" width="80" height="80"></rect>
+          <rect id="grid-c9-r9" x="640" y="640" width="80" height="80"></rect>
+          <rect id="grid-c9-r8" x="640" y="560" width="80" height="80"></rect>
+          <rect id="grid-c9-r7" x="640" y="480" width="80" height="80"></rect>
+          <rect id="grid-c9-r6" x="640" y="400" width="80" height="80"></rect>
+          <rect id="grid-c9-r5" x="640" y="320" width="80" height="80"></rect>
+          <rect id="grid-c9-r4" x="640" y="240" width="80" height="80"></rect>
+          <rect id="grid-c9-r3" x="640" y="160" width="80" height="80"></rect>
+          <rect id="grid-c9-r2" x="640" y="80" width="80" height="80"></rect>
+          <rect id="grid-c9-r1" x="640" y="0" width="80" height="80"></rect>
+          <rect id="grid-c8-r9" x="560" y="640" width="80" height="80"></rect>
+          <rect id="grid-c8-r8" x="560" y="560" width="80" height="80"></rect>
+          <rect id="grid-c8-r7" x="560" y="480" width="80" height="80"></rect>
+          <rect id="grid-c8-r6" x="560" y="400" width="80" height="80"></rect>
+          <rect id="grid-c8-r5" x="560" y="320" width="80" height="80"></rect>
+          <rect id="grid-c8-r4" x="560" y="240" width="80" height="80"></rect>
+          <rect id="grid-c8-r3" x="560" y="160" width="80" height="80"></rect>
+          <rect id="grid-c8-r2" x="560" y="80" width="80" height="80"></rect>
+          <rect id="grid-c8-r1" x="560" y="0" width="80" height="80"></rect>
+          <rect id="grid-c7-r9" x="480" y="640" width="80" height="80"></rect>
+          <rect id="grid-c7-r8" x="480" y="560" width="80" height="80"></rect>
+          <rect id="grid-c7-r7" x="480" y="480" width="80" height="80"></rect>
+          <rect id="grid-c7-r6" x="480" y="400" width="80" height="80"></rect>
+          <rect id="grid-c7-r5" x="480" y="320" width="80" height="80"></rect>
+          <rect id="grid-c7-r4" x="480" y="240" width="80" height="80"></rect>
+          <rect id="grid-c7-r3" x="480" y="160" width="80" height="80"></rect>
+          <rect id="grid-c7-r2" x="480" y="80" width="80" height="80"></rect>
+          <rect id="grid-c7-r1" x="480" y="0" width="80" height="80"></rect>
+          <rect id="grid-c6-r9" x="400" y="640" width="80" height="80"></rect>
+          <rect id="grid-c6-r8" x="400" y="560" width="80" height="80"></rect>
+          <rect id="grid-c6-r7" x="400" y="480" width="80" height="80"></rect>
+          <rect id="grid-c6-r6" x="400" y="400" width="80" height="80"></rect>
+          <rect id="grid-c6-r5" x="400" y="320" width="80" height="80"></rect>
+          <rect id="grid-c6-r4" x="400" y="240" width="80" height="80"></rect>
+          <rect id="grid-c6-r3" x="400" y="160" width="80" height="80"></rect>
+          <rect id="grid-c6-r2" x="400" y="80" width="80" height="80"></rect>
+          <rect id="grid-c6-r1" x="400" y="0" width="80" height="80"></rect>
+          <rect id="grid-c5-r9" x="320" y="640" width="80" height="80"></rect>
+          <rect id="grid-c5-r8" x="320" y="560" width="80" height="80"></rect>
+          <rect id="grid-c5-r7" x="320" y="480" width="80" height="80"></rect>
+          <rect id="grid-c5-r6" x="320" y="400" width="80" height="80"></rect>
+          <rect id="grid-c5-r5" x="320" y="320" width="80" height="80"></rect>
+          <rect id="grid-c5-r4" x="320" y="240" width="80" height="80"></rect>
+          <rect id="grid-c5-r3" x="320" y="160" width="80" height="80"></rect>
+          <rect id="grid-c5-r2" x="320" y="80" width="80" height="80"></rect>
+          <rect id="grid-c5-r1" x="320" y="0" width="80" height="80"></rect>
+          <rect id="grid-c4-r9" x="240" y="640" width="80" height="80"></rect>
+          <rect id="grid-c4-r8" x="240" y="560" width="80" height="80"></rect>
+          <rect id="grid-c4-r7" x="240" y="480" width="80" height="80"></rect>
+          <rect id="grid-c4-r6" x="240" y="400" width="80" height="80"></rect>
+          <rect id="grid-c4-r5" x="240" y="320" width="80" height="80"></rect>
+          <rect id="grid-c4-r4" x="240" y="240" width="80" height="80"></rect>
+          <rect id="grid-c4-r3" x="240" y="160" width="80" height="80"></rect>
+          <rect id="grid-c4-r2" x="240" y="80" width="80" height="80"></rect>
+          <rect id="grid-c4-r1" x="240" y="0" width="80" height="80"></rect>
+          <rect id="grid-c3-r9" x="160" y="640" width="80" height="80"></rect>
+          <rect id="grid-c3-r8" x="160" y="560" width="80" height="80"></rect>
+          <rect id="grid-c3-r7" x="160" y="480" width="80" height="80"></rect>
+          <rect id="grid-c3-r6" x="160" y="400" width="80" height="80"></rect>
+          <rect id="grid-c3-r5" x="160" y="320" width="80" height="80"></rect>
+          <rect id="grid-c3-r4" x="160" y="240" width="80" height="80"></rect>
+          <rect id="grid-c3-r3" x="160" y="160" width="80" height="80"></rect>
+          <rect id="grid-c3-r2" x="160" y="80" width="80" height="80"></rect>
+          <rect id="grid-c3-r1" x="160" y="0" width="80" height="80"></rect>
+          <rect id="grid-c2-r9" x="80" y="640" width="80" height="80"></rect>
+          <rect id="grid-c2-r8" x="80" y="560" width="80" height="80"></rect>
+          <rect id="grid-c2-r7" x="80" y="480" width="80" height="80"></rect>
+          <rect id="grid-c2-r6" x="80" y="400" width="80" height="80"></rect>
+          <rect id="grid-c2-r5" x="80" y="320" width="80" height="80"></rect>
+          <rect id="grid-c2-r4" x="80" y="240" width="80" height="80"></rect>
+          <rect id="grid-c2-r3" x="80" y="160" width="80" height="80"></rect>
+          <rect id="grid-c2-r2" x="80" y="80" width="80" height="80"></rect>
+          <rect id="grid-c2-r1" x="80" y="0" width="80" height="80"></rect>
+          <rect id="grid-c1-r9" x="0" y="640" width="80" height="80"></rect>
+          <rect id="grid-c1-r8" x="0" y="560" width="80" height="80"></rect>
+          <rect id="grid-c1-r7" x="0" y="480" width="80" height="80"></rect>
+          <rect id="grid-c1-r6" x="0" y="400" width="80" height="80"></rect>
+          <rect id="grid-c1-r5" x="0" y="320" width="80" height="80"></rect>
+          <rect id="grid-c1-r4" x="0" y="240" width="80" height="80"></rect>
+          <rect id="grid-c1-r3" x="0" y="160" width="80" height="80"></rect>
+          <rect id="grid-c1-r2" x="0" y="80" width="80" height="80"></rect>
+          <rect id="grid-c1-r1" x="0" y="0" width="80" height="80"></rect>
+        </g>
+        <g id="shapes" transform="translate(8.000000, 3.000000)" fill="#FFFFFF" fill-rule="nonzero">
+          <polygon id="shape-c16-r9" points="1200 640 1200 657.31865 1264 714 1264 696.68135"></polygon>
+          <polygon id="shape-c16-r8" points="1200 560 1200 577.31865 1264 634 1264 616.68135"></polygon>
+          <polygon id="shape-c16-r7" points="1200 480 1200 497.31865 1264 554 1264 536.68135"></polygon>
+          <polygon id="shape-c16-r6" points="1200 400 1200 417.31865 1264 474 1264 456.68135"></polygon>
+          <polygon id="shape-c16-r5" points="1200 320 1200 337.31865 1264 394 1264 376.68135"></polygon>
+          <polygon id="shape-c16-r4" points="1200 240 1200 257.31865 1264 314 1264 296.68135"></polygon>
+          <polygon id="shape-c16-r3" points="1200 160 1200 177.31865 1264 234 1264 216.68135"></polygon>
+          <polygon id="shape-c16-r2" points="1200 80 1200 97.31865 1264 154 1264 136.68135"></polygon>
+          <polygon id="shape-c16-r1" points="1200 0 1200 17.31865 1264 74 1264 56.68135"></polygon>
+          <polygon id="shape-c15-r9" points="1120 640 1120 657.31865 1184 714 1184 696.68135"></polygon>
+          <polygon id="shape-c15-r8" points="1120 560 1120 577.31865 1184 634 1184 616.68135"></polygon>
+          <polygon id="shape-c15-r7" points="1120 480 1120 497.31865 1184 554 1184 536.68135"></polygon>
+          <polygon id="shape-c15-r6" points="1120 400 1120 417.31865 1184 474 1184 456.68135"></polygon>
+          <polygon id="shape-c15-r5" points="1120 320 1120 337.31865 1184 394 1184 376.68135"></polygon>
+          <polygon id="shape-c15-r4" points="1120 240 1120 257.31865 1184 314 1184 296.68135"></polygon>
+          <polygon id="shape-c15-r3" points="1120 160 1120 177.31865 1184 234 1184 216.68135"></polygon>
+          <polygon id="shape-c15-r2" points="1120 80 1120 97.31865 1184 154 1184 136.68135"></polygon>
+          <polygon id="shape-c15-r1" points="1120 0 1120 17.31865 1184 74 1184 56.68135"></polygon>
+          <polygon id="shape-c14-r9" points="1040 640 1040 657.31865 1104 714 1104 696.68135"></polygon>
+          <polygon id="shape-c14-r8" points="1040 560 1040 577.31865 1104 634 1104 616.68135"></polygon>
+          <polygon id="shape-c14-r7" points="1040 480 1040 497.31865 1104 554 1104 536.68135"></polygon>
+          <polygon id="shape-c14-r6" points="1040 400 1040 417.31865 1104 474 1104 456.68135"></polygon>
+          <polygon id="shape-c14-r5" points="1040 320 1040 337.31865 1104 394 1104 376.68135"></polygon>
+          <polygon id="shape-c14-r4" points="1040 240 1040 257.31865 1104 314 1104 296.68135"></polygon>
+          <polygon id="shape-c14-r3" points="1040 160 1040 177.31865 1104 234 1104 216.68135"></polygon>
+          <polygon id="shape-c14-r2" points="1040 80 1040 97.31865 1104 154 1104 136.68135"></polygon>
+          <polygon id="shape-c14-r1" points="1040 0 1040 17.31865 1104 74 1104 56.68135"></polygon>
+          <polygon id="shape-c13-r9" points="960 640 960 657.31865 1024 714 1024 696.68135"></polygon>
+          <polygon id="shape-c13-r8" points="960 560 960 577.31865 1024 634 1024 616.68135"></polygon>
+          <polygon id="shape-c13-r7" points="960 480 960 497.31865 1024 554 1024 536.68135"></polygon>
+          <polygon id="shape-c13-r6" points="960 400 960 417.31865 1024 474 1024 456.68135"></polygon>
+          <polygon id="shape-c13-r5" points="960 320 960 337.31865 1024 394 1024 376.68135"></polygon>
+          <polygon id="shape-c13-r4" points="960 240 960 257.31865 1024 314 1024 296.68135"></polygon>
+          <polygon id="shape-c13-r3" points="960 160 960 177.31865 1024 234 1024 216.68135"></polygon>
+          <polygon id="shape-c13-r2" points="960 80 960 97.31865 1024 154 1024 136.68135"></polygon>
+          <polygon id="shape-c13-r1" points="960 0 960 17.31865 1024 74 1024 56.68135"></polygon>
+          <polygon id="shape-c12-r9" points="880 640 880 657.31865 944 714 944 696.68135"></polygon>
+          <polygon id="shape-c12-r8" points="880 560 880 577.31865 944 634 944 616.68135"></polygon>
+          <polygon id="shape-c12-r7" points="880 480 880 497.31865 944 554 944 536.68135"></polygon>
+          <polygon id="shape-c12-r6" points="880 400 880 417.31865 944 474 944 456.68135"></polygon>
+          <polygon id="shape-c12-r5" points="880 320 880 337.31865 944 394 944 376.68135"></polygon>
+          <polygon id="shape-c12-r4" points="880 240 880 257.31865 944 314 944 296.68135"></polygon>
+          <polygon id="shape-c12-r3" points="880 160 880 177.31865 944 234 944 216.68135"></polygon>
+          <polygon id="shape-c12-r2" points="880 80 880 97.31865 944 154 944 136.68135"></polygon>
+          <polygon id="shape-c12-r1" points="880 0 880 17.31865 944 74 944 56.68135"></polygon>
+          <polygon id="shape-c11-r9" points="800 640 800 657.31865 864 714 864 696.68135"></polygon>
+          <polygon id="shape-c11-r8" points="800 560 800 577.31865 864 634 864 616.68135"></polygon>
+          <polygon id="shape-c11-r7" points="800 480 800 497.31865 864 554 864 536.68135"></polygon>
+          <polygon id="shape-c11-r6" points="800 400 800 417.31865 864 474 864 456.68135"></polygon>
+          <polygon id="shape-c11-r5" points="800 320 800 337.31865 864 394 864 376.68135"></polygon>
+          <polygon id="shape-c11-r4" points="800 240 800 257.31865 864 314 864 296.68135"></polygon>
+          <polygon id="shape-c11-r3" points="800 160 800 177.31865 864 234 864 216.68135"></polygon>
+          <polygon id="shape-c11-r2" points="800 80 800 97.31865 864 154 864 136.68135"></polygon>
+          <polygon id="shape-c11-r1" points="800 0 800 17.31865 864 74 864 56.68135"></polygon>
+          <polygon id="shape-c10-r9" points="720 640 720 657.31865 784 714 784 696.68135"></polygon>
+          <polygon id="shape-c10-r8" points="720 560 720 577.31865 784 634 784 616.68135"></polygon>
+          <polygon id="shape-c10-r7" points="720 480 720 497.31865 784 554 784 536.68135"></polygon>
+          <polygon id="shape-c10-r6" points="720 400 720 417.31865 784 474 784 456.68135"></polygon>
+          <polygon id="shape-c10-r5" points="720 320 720 337.31865 784 394 784 376.68135"></polygon>
+          <polygon id="shape-c10-r4" points="720 240 720 257.31865 784 314 784 296.68135"></polygon>
+          <polygon id="shape-c10-r3" points="720 160 720 177.31865 784 234 784 216.68135"></polygon>
+          <polygon id="shape-c10-r2" points="720 80 720 97.31865 784 154 784 136.68135"></polygon>
+          <polygon id="shape-c10-r1" points="720 0 720 17.31865 784 74 784 56.68135"></polygon>
+          <polygon id="shape-c9-r9" points="640 640 640 657.31865 704 714 704 696.68135"></polygon>
+          <polygon id="shape-c9-r8" points="640 560 640 577.31865 704 634 704 616.68135"></polygon>
+          <polygon id="shape-c9-r7" points="640 480 640 497.31865 704 554 704 536.68135"></polygon>
+          <polygon id="shape-c9-r6" points="640 400 640 417.31865 704 474 704 456.68135"></polygon>
+          <polygon id="shape-c9-r5" points="640 320 640 337.31865 704 394 704 376.68135"></polygon>
+          <polygon id="shape-c9-r4" points="640 240 640 257.31865 704 314 704 296.68135"></polygon>
+          <polygon id="shape-c9-r3" points="640 160 640 177.31865 704 234 704 216.68135"></polygon>
+          <polygon id="shape-c9-r2" points="640 80 640 97.31865 704 154 704 136.68135"></polygon>
+          <polygon id="shape-c9-r1" points="640 0 640 17.31865 704 74 704 56.68135"></polygon>
+          <polygon id="shape-c8-r9" points="560 640 560 657.31865 624 714 624 696.68135"></polygon>
+          <polygon id="shape-c8-r8" points="560 560 560 577.31865 624 634 624 616.68135"></polygon>
+          <polygon id="shape-c8-r7" points="560 480 560 497.31865 624 554 624 536.68135"></polygon>
+          <polygon id="shape-c8-r6" points="560 400 560 417.31865 624 474 624 456.68135"></polygon>
+          <polygon id="shape-c8-r5" points="560 320 560 337.31865 624 394 624 376.68135"></polygon>
+          <polygon id="shape-c8-r4" points="560 240 560 257.31865 624 314 624 296.68135"></polygon>
+          <polygon id="shape-c8-r3" points="560 160 560 177.31865 624 234 624 216.68135"></polygon>
+          <polygon id="shape-c8-r2" points="560 80 560 97.31865 624 154 624 136.68135"></polygon>
+          <polygon id="shape-c8-r1" points="560 0 560 17.31865 624 74 624 56.68135"></polygon>
+          <polygon id="shape-c7-r9" points="480 640 480 657.31865 544 714 544 696.68135"></polygon>
+          <polygon id="shape-c7-r8" points="480 560 480 577.31865 544 634 544 616.68135"></polygon>
+          <polygon id="shape-c7-r7" points="480 480 480 497.31865 544 554 544 536.68135"></polygon>
+          <polygon id="shape-c7-r6" points="480 400 480 417.31865 544 474 544 456.68135"></polygon>
+          <polygon id="shape-c7-r5" points="480 320 480 337.31865 544 394 544 376.68135"></polygon>
+          <polygon id="shape-c7-r4" points="480 240 480 257.31865 544 314 544 296.68135"></polygon>
+          <polygon id="shape-c7-r3" points="480 160 480 177.31865 544 234 544 216.68135"></polygon>
+          <polygon id="shape-c7-r2" points="480 80 480 97.31865 544 154 544 136.68135"></polygon>
+          <polygon id="shape-c7-r1" points="480 0 480 17.31865 544 74 544 56.68135"></polygon>
+          <polygon id="shape-c6-r9" points="400 640 400 657.31865 464 714 464 696.68135"></polygon>
+          <polygon id="shape-c6-r8" points="400 560 400 577.31865 464 634 464 616.68135"></polygon>
+          <polygon id="shape-c6-r7" points="400 480 400 497.31865 464 554 464 536.68135"></polygon>
+          <polygon id="shape-c6-r6" points="400 400 400 417.31865 464 474 464 456.68135"></polygon>
+          <polygon id="shape-c6-r5" points="400 320 400 337.31865 464 394 464 376.68135"></polygon>
+          <polygon id="shape-c6-r4" points="400 240 400 257.31865 464 314 464 296.68135"></polygon>
+          <polygon id="shape-c6-r3" points="400 160 400 177.31865 464 234 464 216.68135"></polygon>
+          <polygon id="shape-c6-r2" points="400 80 400 97.31865 464 154 464 136.68135"></polygon>
+          <polygon id="shape-c6-r1" points="400 0 400 17.31865 464 74 464 56.68135"></polygon>
+          <polygon id="shape-c5-r9" points="320 640 320 657.31865 384 714 384 696.68135"></polygon>
+          <polygon id="shape-c5-r8" points="320 560 320 577.31865 384 634 384 616.68135"></polygon>
+          <polygon id="shape-c5-r7" points="320 480 320 497.31865 384 554 384 536.68135"></polygon>
+          <polygon id="shape-c5-r6" points="320 400 320 417.31865 384 474 384 456.68135"></polygon>
+          <polygon id="shape-c5-r5" points="320 320 320 337.31865 384 394 384 376.68135"></polygon>
+          <polygon id="shape-c5-r4" points="320 240 320 257.31865 384 314 384 296.68135"></polygon>
+          <polygon id="shape-c5-r3" points="320 160 320 177.31865 384 234 384 216.68135"></polygon>
+          <polygon id="shape-c5-r2" points="320 80 320 97.31865 384 154 384 136.68135"></polygon>
+          <polygon id="shape-c5-r1" points="320 0 320 17.31865 384 74 384 56.68135"></polygon>
+          <polygon id="shape-c4-r9" points="240 640 240 657.31865 304 714 304 696.68135"></polygon>
+          <polygon id="shape-c4-r8" points="240 560 240 577.31865 304 634 304 616.68135"></polygon>
+          <polygon id="shape-c4-r7" points="240 480 240 497.31865 304 554 304 536.68135"></polygon>
+          <polygon id="shape-c4-r6" points="240 400 240 417.31865 304 474 304 456.68135"></polygon>
+          <polygon id="shape-c4-r5" points="240 320 240 337.31865 304 394 304 376.68135"></polygon>
+          <polygon id="shape-c4-r4" points="240 240 240 257.31865 304 314 304 296.68135"></polygon>
+          <polygon id="shape-c4-r3" points="240 160 240 177.31865 304 234 304 216.68135"></polygon>
+          <polygon id="shape-c4-r2" points="240 80 240 97.31865 304 154 304 136.68135"></polygon>
+          <polygon id="shape-c4-r1" points="240 0 240 17.31865 304 74 304 56.68135"></polygon>
+          <polygon id="shape-c3-r9" points="160 640 160 657.31865 224 714 224 696.68135"></polygon>
+          <polygon id="shape-c3-r8" points="160 560 160 577.31865 224 634 224 616.68135"></polygon>
+          <polygon id="shape-c3-r7" points="160 480 160 497.31865 224 554 224 536.68135"></polygon>
+          <polygon id="shape-c3-r6" points="160 400 160 417.31865 224 474 224 456.68135"></polygon>
+          <polygon id="shape-c3-r5" points="160 320 160 337.31865 224 394 224 376.68135"></polygon>
+          <polygon id="shape-c3-r4" points="160 240 160 257.31865 224 314 224 296.68135"></polygon>
+          <polygon id="shape-c3-r3" points="160 160 160 177.31865 224 234 224 216.68135"></polygon>
+          <polygon id="shape-c3-r2" points="160 80 160 97.31865 224 154 224 136.68135"></polygon>
+          <polygon id="shape-c3-r1" points="160 0 160 17.31865 224 74 224 56.68135"></polygon>
+          <polygon id="shape-c2-r9" points="80 640 80 657.31865 144 714 144 696.68135"></polygon>
+          <polygon id="shape-c2-r8" points="80 560 80 577.31865 144 634 144 616.68135"></polygon>
+          <polygon id="shape-c2-r7" points="80 480 80 497.31865 144 554 144 536.68135"></polygon>
+          <polygon id="shape-c2-r6" points="80 400 80 417.31865 144 474 144 456.68135"></polygon>
+          <polygon id="shape-c2-r5" points="80 320 80 337.31865 144 394 144 376.68135"></polygon>
+          <polygon id="shape-c2-r4" points="80 240 80 257.31865 144 314 144 296.68135"></polygon>
+          <polygon id="shape-c2-r3" points="80 160 80 177.31865 144 234 144 216.68135"></polygon>
+          <polygon id="shape-c2-r2" points="80 80 80 97.31865 144 154 144 136.68135"></polygon>
+          <polygon id="shape-c2-r1" points="80 0 80 17.31865 144 74 144 56.68135"></polygon>
+          <polygon id="shape-c1-r9" points="0 640 0 657.31865 64 714 64 696.68135"></polygon>
+          <polygon id="shape-c1-r8" points="0 560 0 577.31865 64 634 64 616.68135"></polygon>
+          <polygon id="shape-c1-r7" points="0 480 0 497.31865 64 554 64 536.68135"></polygon>
+          <polygon id="shape-c1-r6" points="0 400 0 417.31865 64 474 64 456.68135"></polygon>
+          <polygon id="shape-c1-r5" points="0 320 0 337.31865 64 394 64 376.68135"></polygon>
+          <polygon id="shape-c1-r4" points="0 240 0 257.31865 64 314 64 296.68135"></polygon>
+          <polygon id="shape-c1-r3" points="0 160 0 177.31865 64 234 64 216.68135"></polygon>
+          <polygon id="shape-c1-r2" points="0 80 0 97.31865 64 154 64 136.68135"></polygon>
+          <polygon id="shape-c1-r1" points="0 0 0 17.31865 64 74 64 56.68135"></polygon>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

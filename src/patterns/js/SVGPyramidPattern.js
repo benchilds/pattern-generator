@@ -1,7 +1,7 @@
 import React from "react";
-import { ReactComponent as SVG } from '../svg/grid_slashes.svg';
+import { ReactComponent as SVG } from '../svg/pattern_pyramid.svg';
 
-export function SVGSlashesGrid() {
+export function SVGPyramidPattern() {
 
   return React.createElement(
     "div",

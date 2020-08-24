@@ -22,10 +22,11 @@ export function Customiser(props) {
           <div className="form-group">
             <label htmlFor="patternType">Pattern</label>
             <select onChange={(e) => handleSelectedChange(e)} className="form-control" id="pattern" aria-describedby="patternTip" value={patternSel}>
-              <option value="zigzagGrid">Zig-zag grid</option>
-              <option value="diagonalBars">Diagonal bars</option>
               <option value="slashesGrid">Slashes grid</option>
-              <option value="pyramid">Pyramid</option>
+              <option value="zigzagPattern">Zig-zag pattern</option>
+              <option value="diagonalBarsPattern">Diagonal bars pattern</option>
+              <option value="slashesPattern">Slashes pattern</option>
+              <option value="pyramidPattern">Pyramid pattern</option>
             </select>
             <small id="patternTip" className="form-text text-muted">Type of pattern to generate</small>
           </div>

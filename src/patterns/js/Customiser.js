@@ -45,23 +45,28 @@ export function Customiser(props) {
             { onChange: e => handleSelectedChange(e), className: "form-control", id: "pattern", "aria-describedby": "patternTip", value: patternSel },
             React.createElement(
               "option",
-              { value: "zigzagGrid" },
-              "Zig-zag grid"
-            ),
-            React.createElement(
-              "option",
-              { value: "diagonalBars" },
-              "Diagonal bars"
-            ),
-            React.createElement(
-              "option",
               { value: "slashesGrid" },
               "Slashes grid"
             ),
             React.createElement(
               "option",
-              { value: "pyramid" },
-              "Pyramid"
+              { value: "zigzagPattern" },
+              "Zig-zag pattern"
+            ),
+            React.createElement(
+              "option",
+              { value: "diagonalBarsPattern" },
+              "Diagonal bars pattern"
+            ),
+            React.createElement(
+              "option",
+              { value: "slashesPattern" },
+              "Slashes pattern"
+            ),
+            React.createElement(
+              "option",
+              { value: "pyramidPattern" },
+              "Pyramid pattern"
             )
           ),
           React.createElement(

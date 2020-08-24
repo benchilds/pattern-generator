@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import { Selector } from './patterns/js/Selector';
+// import { Selector } from './patterns/js/Selector';
 import { Customiser } from './patterns/js/Customiser';
-import { SVGZigzagGrid } from './patterns/js/SVGZigzagGrid';
-import { SVGDiagonalBars } from './patterns/js/SVGDiagonalBars';
 import { SVGSlashesGrid } from './patterns/js/SVGSlashesGrid';
-import { SVGPyramid } from './patterns/js/SVGPyramid';
+import { SVGZigzagPattern } from './patterns/js/SVGZigzagPattern';
+import { SVGDiagonalBarsPattern } from './patterns/js/SVGDiagonalBarsPattern';
+import { SVGSlashesPattern } from './patterns/js/SVGSlashesPattern';
+import { SVGPyramidPattern } from './patterns/js/SVGPyramidPattern';
 
 import './App.scss';
 
@@ -19,10 +20,11 @@ function App() {
         <Customiser onSelectedChange={handlePatternChange} patternSel={pattern} />
         {/* <Selector onSelectedChange={handlePatternChange} /> */}
       </div>
-      {pattern === 'zigzagGrid' && <SVGZigzagGrid />}
-      {pattern === 'diagonalBars' && <SVGDiagonalBars />}
       {pattern === 'slashesGrid' && <SVGSlashesGrid />}
-      {pattern === 'pyramid' && <SVGPyramid />}
+      {pattern === 'zigzagPattern' && <SVGZigzagPattern />}
+      {pattern === 'diagonalBarsPattern' && <SVGDiagonalBarsPattern />}
+      {pattern === 'slashesPattern' && <SVGSlashesPattern />}
+      {pattern === 'pyramidPattern' && <SVGPyramidPattern />}
     </div>
   );
 }
