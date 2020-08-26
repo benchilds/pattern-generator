@@ -175,3 +175,30 @@ h1, h2, h3, h4, h5 { font-weight: 500; }
   }
 
 }
+
+// <Customiser/>
+.customiser {
+
+  .col {
+    
+    .form-group {
+
+      h4 {
+        padding-bottom: 4px;
+        color: $white;
+        font-size: 1.1rem;
+      }
+
+      label {
+        color: $white;
+        &.form-text {
+          padding-top: 2px;
+          font-size: 0.9rem;
+        }
+      }
+
+    }
+
+  }
+
+}

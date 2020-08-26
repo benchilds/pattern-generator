@@ -11,20 +11,20 @@ import './App.scss';
 
 function App() {
 
-  const [pattern, setPattern] = useState('diagonalBars');
-  const handlePatternChange = (pattern) => setPattern(pattern);
+  const [template, setTemplate] = useState('diagonalBarsPattern');
+  const handleTemplateChange = (template) => setTemplate(template);
 
   return (
     <div>
       <div className="config container">
-        <Customiser onSelectedChange={handlePatternChange} patternSel={pattern} />
+        <Customiser onSelectedChange={handleTemplateChange} patternSel={template} />
         {/* <Selector onSelectedChange={handlePatternChange} /> */}
       </div>
-      {pattern === 'slashesGrid' && <SVGSlashesGrid />}
-      {pattern === 'zigzagPattern' && <SVGZigzagPattern />}
-      {pattern === 'diagonalBarsPattern' && <SVGDiagonalBarsPattern />}
-      {pattern === 'slashesPattern' && <SVGSlashesPattern />}
-      {pattern === 'pyramidPattern' && <SVGPyramidPattern />}
+      {template === 'slashesGrid' && <SVGSlashesGrid />}
+      {template === 'zigzagPattern' && <SVGZigzagPattern />}
+      {template === 'diagonalBarsPattern' && <SVGDiagonalBarsPattern />}
+      {template === 'slashesPattern' && <SVGSlashesPattern />}
+      {template === 'pyramidPattern' && <SVGPyramidPattern />}
     </div>
   );
 }
