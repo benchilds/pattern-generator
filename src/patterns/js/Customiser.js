@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+// import { SVG } from '@svgdotjs/svg.js';
+import * as d3 from 'd3';
 
 export function Customiser(props) {
 
-  const [patternSel, setPattern] = useState(props.patternSel);
-  const [bgColourSel, setBgColour] = useState(props.bgColourSel);
-  const [shapeColourSel, setShapeColour] = useState(props.shapeColourSel);
+  const [pattern, setPattern] = useState(props.patternSel);
+  const [bgColour, setBgColour] = useState(props.bgColourSel);
+  const [shapeColour, setShapeColour] = useState(props.shapeColourSel);
 
   function handlePatternChange(e) {
     console.log(`Pattern changed! pattern:${e.target.value}`);
@@ -14,14 +16,16 @@ export function Customiser(props) {
 
   function handleBgColourChange(e) {
     console.log(`BG colour changed! color:${e.target.value}`);
-    // props.onSelectedChange(e.target.value);
     setBgColour(e.target.value);
+
+    d3.selectAll("g#patternHolder rect#bg").attr('fill', e.target.value);
   }
 
   function handleShapeColourChange(e) {
     console.log(`Shape colour changed! color:${e.target.value}`);
-    // props.onSelectedChange(e.target.value);
     setShapeColour(e.target.value);
+
+    d3.selectAll("g#patternHolder g#pattern g#shapes polygon").attr('fill', e.target.value);
   }
 
   return React.createElement(
@@ -56,7 +60,7 @@ export function Customiser(props) {
           ),
           React.createElement(
             "select",
-            { onChange: e => handlePatternChange(e), className: "form-control", id: "pattern", "aria-describedby": "patternLabel", value: patternSel },
+            { onChange: e => handlePatternChange(e), className: "form-control", id: "pattern", "aria-describedby": "patternLabel", value: pattern },
             React.createElement(
               "option",
               { value: "slashesGrid" },
@@ -103,21 +107,31 @@ export function Customiser(props) {
           ),
           React.createElement(
             "select",
-            { onChange: e => handleBgColourChange(e), className: "form-control", id: "bgColour", "aria-describedby": "bgColourTip", value: bgColourSel },
+            { onChange: e => handleBgColourChange(e), className: "form-control", id: "bgColour", "aria-describedby": "bgColourTip", value: bgColour },
             React.createElement(
               "option",
-              { value: "orange" },
+              { value: "#ff6100" },
               "Orange"
             ),
             React.createElement(
               "option",
-              { value: "black" },
+              { value: "#222222" },
               "Black"
             ),
             React.createElement(
               "option",
-              { value: "grey" },
-              "Grey"
+              { value: "#747474" },
+              "D Grey"
+            ),
+            React.createElement(
+              "option",
+              { value: "#d4d4d4" },
+              "L Grey"
+            ),
+            React.createElement(
+              "option",
+              { value: "#ffffff" },
+              "White"
             )
           ),
           React.createElement(
@@ -131,21 +145,31 @@ export function Customiser(props) {
           { className: "form-group" },
           React.createElement(
             "select",
-            { onChange: e => handleShapeColourChange(e), className: "form-control", id: "shapeColour", "aria-describedby": "shapeColourTip", value: shapeColourSel },
+            { onChange: e => handleShapeColourChange(e), className: "form-control", id: "shapeColour", "aria-describedby": "shapeColourTip", value: shapeColour },
             React.createElement(
               "option",
-              { value: "orange" },
+              { value: "#ff6100" },
               "Orange"
             ),
             React.createElement(
               "option",
-              { value: "black" },
+              { value: "#222222" },
               "Black"
             ),
             React.createElement(
               "option",
-              { value: "grey" },
-              "Grey"
+              { value: "#747474" },
+              "D Grey"
+            ),
+            React.createElement(
+              "option",
+              { value: "#d4d4d4" },
+              "L Grey"
+            ),
+            React.createElement(
+              "option",
+              { value: "#ffffff" },
+              "White"
             )
           ),
           React.createElement(
